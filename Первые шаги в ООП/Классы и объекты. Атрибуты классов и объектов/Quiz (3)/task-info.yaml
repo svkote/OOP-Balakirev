@@ -1,13 +1,13 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: del Point.tp
-- text: delattr('Point', 'tp')
-- text: delattr(Point, tp)
-- text: Point.tp = 0
 - text: del tp of Point
-- text: delattr(Point, 'tp')
 - text: del Point['tp']
+- text: Point.tp = 0
+- text: del Point.tp
+- text: delattr(Point, tp)
+- text: delattr('Point', 'tp')
+- text: delattr(Point, 'tp')
 - text: Point.tp = None
 files:
 - name: task.py
@@ -16,7 +16,13 @@ files:
     #  You can experiment here, it won’t be checked
 
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 13 Oct 2022 21:07:20 UTC
 record: -1
+selected_options:
+- 3
+- 6
 custom_name: Quiz
 local_check: false
