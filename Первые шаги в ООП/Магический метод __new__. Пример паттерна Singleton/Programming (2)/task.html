@@ -1,0 +1,23 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/sX_uP7GVqkc" rel="noopener noreferrer nofollow">https://youtu.be/sX_uP7GVqkc</a></p>
+
+<p><strong>Подвиг 8.</strong> В программе объявлена переменная TYPE_OS и два следующих класса:</p>
+
+<pre><code>TYPE_OS = 1 # 1 - Windows; 2 - Linux
+
+class DialogWindows:
+    name_class = "DialogWindows"
+
+
+class DialogLinux:
+    name_class = "DialogLinux"
+</code></pre>
+
+<p>Необходимо объявить третий класс с именем Dialog, который бы создавал объекты командой:</p>
+
+<pre><code>dlg = Dialog(&lt;название&gt;)</code></pre>
+
+<p>Здесь &lt;название&gt; - это строка, которая сохраняется в локальном свойстве <strong>name</strong> объекта dlg.</p>
+
+<p>Класс Dialog должен создавать объекты класса DialogWindows, если переменная TYPE_OS = 1 и объекты класса DialogLinux, если переменная TYPE_OS не равна 1. При этом, переменная TYPE_OS может меняться в последующих строчках программы. Имейте это в виду, при объявлении класса Dialog.</p>
+
+<p>P.S. В программе на экран ничего выводить не нужно. Только объявить класс Dialog.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

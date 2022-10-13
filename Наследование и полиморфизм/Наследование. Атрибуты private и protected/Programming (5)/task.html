@@ -1,0 +1,38 @@
+<p><strong>Подвиг 10 (на повторение).</strong> В программе объявлены два класса и глобальная переменная:</p>
+
+<pre><code>CURRENT_OS = 'windows'   # 'windows', 'linux'
+
+
+class WindowsFileDialog:
+    def __init__(self, title, path, exts):
+        self.__title = title # заголовок диалогового окна
+        self.__path = path  # начальный каталог с файлами
+        self.__exts = exts  # кортеж из отображаемых расширений файлов
+
+
+class LinuxFileDialog:
+    def __init__(self, title, path, exts):
+        self.__title = title # заголовок диалогового окна
+        self.__path = path  # начальный каталог с файлами
+        self.__exts = exts  # кортеж из отображаемых расширений файлов
+</code></pre>
+
+<p>Вам необходимо объявить класс с именем FileDialogFactory (фабрика классов), который бы при выполнении команды:</p>
+
+<pre><code>dlg = FileDialogFactory(title, path, exts)</code></pre>
+
+<p>возвращал объект класса WindowsFileDialog, если CURRENT_OS равна строке 'windows', в противном случае - объект класса LinuxFileDialog. Объект самого класса FileDialogFactory создаваться не должен.</p>
+
+<p>Для реализации такой логики, объявите внутри класса FileDialogFactory два статических метода:</p>
+
+<p>def create_windows_filedialog(title, path, exts) - для создания объектов класса WindowsFileDialog;<br>
+def create_linux_filedialog(title, path, exts) - для создания объектов класса LinuxFileDialog.</p>
+
+<p>Эти методы следует вызывать в магическом методе __new__() класса FileDialogFactory. Подумайте, как это правильно сделать, чтобы не создавался объект самого класса, а лишь возвращался объект или класса WindowsFileDialog, или класса LinuxFileDialog.</p>
+
+<p>Пример использования класса (эту строчку в программе не писать):</p>
+
+<pre><code>dlg = FileDialogFactory('Изображения', 'd:/images/', ('jpg', 'gif', 'bmp', 'png'))</code></pre>
+
+<p>P.S. В программе нужно дополнительно объявить только класс FileDialogFactory. На экран выводить ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

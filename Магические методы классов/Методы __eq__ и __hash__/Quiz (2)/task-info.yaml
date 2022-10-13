@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: хэши h1 и h2 объектов p1 и p2 будут равны, т.к. переопределенный оператор
+    сравнения (==) для p1 == p2 даст True
+- text: будет ошибка, что объекты p1 и p2 не хешируемые
+- text: хэши будут вычислены, но равенство объектов p1 == p2 не гарантирует равенство
+    их хэшей
+- text: хэши h1 и h2 объектов p1 и p2 будут разными, т.к. сами объекты p1 и p2 - разные
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

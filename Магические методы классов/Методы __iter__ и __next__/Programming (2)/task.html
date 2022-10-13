@@ -1,0 +1,28 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/kxCAnaAqdOk" rel="noopener noreferrer nofollow">https://youtu.be/kxCAnaAqdOk</a></p>
+
+<p><strong>Подвиг 7.</strong> Теперь, вам необходимо разработать итератор, который бы перебирал указанные столбцы двумерного списка. Список представляет собой двумерную таблицу из данных:</p>
+
+<pre><code>lst = [[x11, x12, ..., x1N],
+       [x21, x22, ..., x2N],
+       ...
+       [xM1, xM2, ..., xMN]
+      ]</code></pre>
+
+<p>Для этого в программе необходимо объявить класс с именем IterColumn, объекты которого создаются командой:</p>
+
+<pre><code>it = IterColumn(lst, column)</code></pre>
+
+<p>где lst - ссылка на двумерный список; column - индекс перебираемого столбца (отсчитывается от 0).</p>
+
+<p>Затем, с объектами класса IterColumn должны быть доступны следующие операции:</p>
+
+<pre><code>it = IterColumn(lst, 1)
+for x in it:  # последовательный перебор всех элементов столбца списка: x12, x22, ..., xM2
+    print(x)
+
+it_iter = iter(it)
+x = next(it_iter)
+</code></pre>
+
+<p>P.S. В программе нужно объявить только класс итератора. Выводить на экран ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

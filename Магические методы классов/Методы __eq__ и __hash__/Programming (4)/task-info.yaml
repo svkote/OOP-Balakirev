@@ -1,0 +1,9 @@
+type: code
+custom_name: Programming
+files:
+- name: task.py
+  visible: true
+  text: 's_inp = input()  # эту строку (переменную s_inp) в программе не менять'
+  learner_created: false
+status: Unchecked
+record: -1

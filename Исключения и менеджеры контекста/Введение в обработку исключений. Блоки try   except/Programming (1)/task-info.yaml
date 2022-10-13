@@ -1,0 +1,11 @@
+type: code
+custom_name: Programming
+files:
+- name: task.py
+  visible: true
+  text: |-
+    # считывание строки и разбиение ее по пробелам
+    lst_in = input().split()
+  learner_created: false
+status: Unchecked
+record: -1

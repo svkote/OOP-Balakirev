@@ -1,0 +1,21 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/pohpzoAbkrQ" rel="noopener noreferrer nofollow">https://youtu.be/pohpzoAbkrQ</a></p>
+
+<p><strong>Подвиг 3.</strong> Создается проект, в котором предполагается использовать списки из целых чисел. Для этого вам ставится задача создать класс с именем <strong>ListInteger</strong> с базовым классом list и переопределить три метода:</p>
+
+<p>__init__()<br>
+__setitem__()<br>
+append()</p>
+
+<p>так, чтобы список ListInteger содержал только целые числа. При попытке присвоить любой другой тип данных, генерировать исключение командой:</p>
+
+<pre><code>raise TypeError('можно передавать только целочисленные значения')</code></pre>
+
+<p>Пример использования класса ListInteger (эти строчки в программе не писать):</p>
+
+<pre><code>s = ListInteger((1, 2, 3))
+s[1] = 10
+s.append(11)
+print(s)
+s[0] = 10.5 # TypeError</code></pre>
+
+<p>P.S. В программе нужно объявить только класс. На экран выводить ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

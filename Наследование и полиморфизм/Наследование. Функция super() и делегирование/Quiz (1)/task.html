@@ -1,0 +1,21 @@
+<p><strong>Подвиг 2.</strong> В программе записаны следующие классы:</p>
+
+<pre><code>class SmartPhone:
+    def call(self):
+        pass
+
+    def get_info(self):
+        return "SmartPhone"
+
+
+class IPhone(SmartPhone):
+    def __init__(self, model):
+        self.model = model
+
+    def get_info(self):
+        return super().get_info() + ": IPhone " + self.model
+
+</code></pre>
+
+<p>Выберите все верные утверждения, связанные с этой программой.<br>
+ </p>

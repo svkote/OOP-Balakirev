@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: на экране будет отображено значение 0
+- text: в строчке sp.ID_SHOP_ITEM += 1 возникнет ошибка, так как это эквивалентно
+    команде sp.ID_SHOP_ITEM = sp.ID_SHOP_ITEM + 1, а локальный атрибут ID_SHOP_ITEM
+    отсутствует в объекте sp
+- text: в строчке sp.ID_SHOP_ITEM += 1 создается новая локальная переменная ID_SHOP_ITEM
+    со значением 1
+- text: в строчке sp.ID_SHOP_ITEM += 1 атрибут ID_SHOP_ITEM класса Shop увеличивается
+    на 1
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

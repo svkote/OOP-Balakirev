@@ -1,0 +1,15 @@
+type: code
+custom_name: Programming
+files:
+- name: task.py
+  visible: true
+  text: |-
+    # здесь объявляйте класс
+
+
+    text = input()   # эту строчку не менять
+
+    # здесь создавайте объекты класса и обрабатывайте строку text
+  learner_created: false
+status: Unchecked
+record: -1

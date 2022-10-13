@@ -1,0 +1,19 @@
+type: code
+files:
+- name: task.py
+  visible: true
+  text: |-
+    # здесь объявляйте классы
+
+
+    try:
+        # здесь команда для генерации исключения
+    except NegativeLengthString:
+        print("NegativeLengthString")
+    except ExceedLengthString:
+        print("ExceedLengthString")
+    except StringException:
+        print("StringException")
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,19 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/zQDvmHlS6wg" rel="noopener noreferrer nofollow">https://youtu.be/zQDvmHlS6wg</a></p>
+
+<p><strong>Подвиг 8.</strong> В программе вводятся в одну строчку через пробел некоторые данные, например:</p>
+
+<pre><code>"1 -5.6 True abc 0 23.56 hello"</code></pre>
+
+<p>Эти данные разбиваются по пробелу и представляются в виде списка строк:</p>
+
+<pre><code>lst_in = input().split()</code></pre>
+
+<p>Ваша задача сформировать новый список с именем <strong>lst_out</strong>, в котором строки с целыми числами будут представлены как целые числа (тип int), строки с вещественными числами, как вещественные (тип float), а остальные данные - без изменений.</p>
+
+<p>Например:</p>
+
+<pre><code>lst_out = [1, -5.6, 'True', 'abc', 0, 23.56, 'hello']  # после обработки введенной строки "1 -5.6 True abc 0 23.56 hello"</code></pre>
+
+<p>Реализовать эту задачу следует с помощью функции map() и объявления вспомогательной функции с механизмом обработки исключений для непосредственного преобразования данных в целые или вещественные числа.</p>
+
+<p>P.S. В программе нужно только сформировать список lst_out. На экран ничего выводить не нужно.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">hello 1 world -2 4.5 True</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight"></code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

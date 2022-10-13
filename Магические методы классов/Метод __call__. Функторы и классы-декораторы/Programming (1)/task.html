@@ -1,0 +1,26 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/JIQhCEqb4rU" rel="noopener noreferrer nofollow">https://youtu.be/JIQhCEqb4rU</a></p>
+
+<p><strong>Подвиг 3.</strong> Для последовательной обработки файлов из некоторого списка, например:</p>
+
+<pre><code>filenames = ["boat.jpg", "web.png", "text.txt", "python.doc", "ava.8.jpg", "forest.jpeg", "eq_1.png", "eq_2.png", "my.html", "data.shtml"]</code></pre>
+
+<p>Необходимо объявить класс ImageFileAcceptor, который бы выделял только файлы с указанными расширениями.</p>
+
+<p>Для этого предполагается создавать объекты класса командой:</p>
+
+<pre><code>acceptor = ImageFileAcceptor(extensions)</code></pre>
+
+<p>где <u>extensions</u> - кортеж с допустимыми расширениями файлов, например: extensions = ('jpg', 'bmp', 'jpeg').</p>
+
+<p>А, затем, использовать объект acceptor в стандартной функции filter языка Python следующим образом:</p>
+
+<pre><code class="language-python">image_filenames = filter(acceptor, filenames)</code></pre>
+
+<p>Пример использования класса (эти строчки в программе писать не нужно):</p>
+
+<pre><code>filenames = ["boat.jpg", "web.png", "text.txt", "python.doc", "ava.jpg", "forest.jpeg", "eq_1.png", "eq_2.png"]
+acceptor = ImageFileAcceptor(('jpg', 'bmp', 'jpeg'))
+image_filenames = filter(acceptor, filenames)
+print(list(image_filenames))  # ["boat.jpg", "ava.jpg", "forest.jpeg"]</code></pre>
+
+<p>P.S. Ваша задача только объявить класс ImageFileAcceptor. На экран ничего выводить не нужно. </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

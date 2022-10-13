@@ -1,0 +1,49 @@
+<p><strong>Подвиг 5.</strong> Вам поручено организовать представление объектов для продажи в риэлтерских агентствах. Для этого в программе нужно объявить базовый класс SellItem, объекты которого создаются командой:</p>
+
+<pre><code>item = SellItem(name, price)</code></pre>
+
+<p>где <u>name</u> - название объекта продажи (строка); <u>price</u> - цена продажи (число: целое или вещественное).</p>
+
+<p>Каждые конкретные типы объектов описываются следующими классами, унаследованные от базового SellItem:</p>
+
+<p>House - дома;<br>
+Flat - квартиры;<br>
+Land - земельные участки.</p>
+
+<p style="text-align: center;"><img alt="" height="156" name="rielter_sell.png" src="https://ucarecdn.com/d4edccea-ba30-44b4-b94f-1916e3726fc9/" width="361"></p>
+
+<p>Объекты этих классов создаются командами:</p>
+
+<pre><code>house = House(name, price, material, square)
+flat = Flat(name, price, size, rooms)
+land = Land(name, price, square)</code></pre>
+
+<p>В каждом объекте этих классов должны формироваться соответствующие локальные атрибуты: name, price и т.д.</p>
+
+<p>Формирование атрибутов name и price должно выполняться в инициализаторе базового класса.</p>
+
+<p>Далее, объявить еще один класс с именем Agency, объекты которого создаются командой:</p>
+
+<pre><code>ag = Agency(name)</code></pre>
+
+<p>где <u>name</u> - название агентства (строка). В классе Agency объявить следующие методы:</p>
+
+<p>add_object(obj) - добавление нового объекта недвижимости для продажи (один из объектов классов: House, Flat, Land);<br>
+remove_object(obj) - удаление объекта obj из списка объектов для продажи;<br>
+get_objects() - возвращает список из всех объектов для продажи.</p>
+
+<p>Пример использования классов (эти строчки в программе не писать):</p>
+
+<pre><code>ag = Agency("Рога и копыта")
+ag.add_object(Flat("квартира, 3к", 10000000, 121.5, 3))
+ag.add_object(Flat("квартира, 2к", 8000000, 74.5, 2))
+ag.add_object(Flat("квартира, 1к", 4000000, 54, 1))
+ag.add_object(House("дом, крипичный", price=35000000, material="кирпич", square=186.5))
+ag.add_object(Land("участок под застройку", 3000000, 6.74))
+for obj in ag.get_objects():
+    print(obj.name)
+
+lst_houses = [x for x in ag.get_objects() if isinstance(x, House)] # выделение списка домов</code></pre>
+
+<p>P.S. В программе нужно объявить только классы. На экран выводить ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

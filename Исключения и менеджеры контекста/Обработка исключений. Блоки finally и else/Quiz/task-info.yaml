@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: при вводе любых не числовых значений
+- text: всегда будет переходить, вне зависимости от возникновения исключений
+- text: при вводе любых вещественных значений
+- text: при вводе любых целочисленных значений
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

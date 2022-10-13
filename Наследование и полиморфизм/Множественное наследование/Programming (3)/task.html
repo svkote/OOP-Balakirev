@@ -1,0 +1,54 @@
+<p><strong>Подвиг 9.</strong> Объявите класс с именем Money (деньги), объекты которого создаются командой:</p>
+
+<pre><code>money = Money(value)</code></pre>
+
+<p>где value - любое число (целое или вещественное). Если указывается не числовое значение, то генерируется исключение командой:</p>
+
+<pre><code>raise TypeError('сумма должна быть числом')</code></pre>
+
+<p>В каждом объекте этого класса должен формироваться локальный атрибут _money с соответствующим значением. Также в классе Money должно быть объект-свойство (property):</p>
+
+<p><strong>money</strong> - для записи и считывания значения из атрибута _money.</p>
+
+<p>В связке с классом Money работает еще один класс:</p>
+
+<pre><code>class MoneyOperators:
+    def __add__(self, other):
+        if type(other) in (int, float):
+            return self.__class__(self.money + other)
+
+        if type(self) != type(other):
+            raise TypeError('Разные типы объектов')
+
+        return self.__class__(self.money + other.money)
+</code></pre>
+
+<p>Он определяет работу арифметических операторов. В данном примере описан алгоритм сложения двух объектов класса Money (или объектов его дочерних классов).</p>
+
+<p>Обратите внимание, как реализован метод __add__() в этом классе. Он универсален при работе с любыми объектами класса Money или его дочерних классов. Здесь атрибут __class__ - это ссылка на класс объекта self. С помощью __class__ можно создавать объекты того же класса, что и self.</p>
+
+<p>Вам необходимо добавить в класс <strong>MoneyOperators</strong> аналогичную реализацию оператора вычитания.</p>
+
+<p>На основе двух классов (Money и MoneyOperators) предполагается создавать классы кошельков разных валют. Например, так:</p>
+
+<pre><code>class MoneyR(Money, MoneyOperators):
+    def __str__(self):
+        return f"MoneyR: {self.money}"
+
+
+class MoneyD(Money, MoneyOperators):
+    def __str__(self):
+        return f"MoneyD: {self.money}"
+</code></pre>
+
+<p>И, затем применять их следующим образом (эти строчки в программе писать не нужно):</p>
+
+<pre><code>m1 = MoneyR(1)
+m2 = MoneyD(2)
+m = m1 + 10
+print(m)  # MoneyR: 11
+m = m1 - 5.4
+m = m1 + m2  # TypeError</code></pre>
+
+<p>P.S. В программе требуется объявить только классы. На экран выводить ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

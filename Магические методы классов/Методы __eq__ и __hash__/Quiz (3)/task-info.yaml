@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: возникнет ошибка, так как ключами словаря не могут выступать объекты классов
+- text: программа выполнится без ошибок, но словарь будет пустым, так как объекты
+    id1, id2 не могут выступать ключами словаря
+- text: 'словарь будет успешно создан и к его значениям можно обращаться, например,
+    командой: d[id1].id'
+- text: будет создан словарь с одним ключом, так как объект id1 равен объекту id2
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

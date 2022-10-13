@@ -1,0 +1,21 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/6wnJd7OrNaI" rel="noopener noreferrer nofollow">https://youtu.be/6wnJd7OrNaI</a></p>
+
+<p><strong>Подвиг 5.</strong> Объявите в программе класс-исключение с именем PrimaryKeyError, унаследованным от базового класса Exception. Объекты класса PrimaryKeyError должны создаваться командами:</p>
+
+<pre><code>e1 = PrimaryKeyError()          # Первичный ключ должен быть целым неотрицательным числом
+e2 = PrimaryKeyError(id='abc')  # Значение первичного ключа id = abc недопустимо
+e3 = PrimaryKeyError(pk='123')  # Значение первичного ключа pk = 123 недопустимо</code></pre>
+
+<p>В первом варианте команды должно формироваться сообщение об ошибке "Первичный ключ должен быть целым неотрицательным числом". При втором варианте:</p>
+
+<p>"Значение первичного ключа id = &lt;id&gt; недопустимо"</p>
+
+<p>И при третьем:</p>
+
+<p>"Значение первичного ключа pk = &lt;pk&gt; недопустимо"</p>
+
+<p>Эти сообщения должны формироваться при отображении объектов класса PrimaryKeyError, например:</p>
+
+<pre><code>print(e2) # Значение первичного ключа id = abc недопустимо</code></pre>
+
+<p>Затем, сгенерируйте это исключение с аргументом id = -10.5, обработайте его и отобразите на экране объект исключения.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight"><br></code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Значение первичного ключа id = -10.5 недопустимо</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

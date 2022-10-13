@@ -1,0 +1,38 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/IxXtZXrnnDY" rel="noopener noreferrer nofollow">https://youtu.be/IxXtZXrnnDY</a></p>
+
+<p><strong>Подвиг 7. </strong>Имеется следующий класс для считывания информации из входного потока:</p>
+
+<pre><code>import sys
+
+
+class StreamReader:
+    FIELDS = ('id', 'title', 'pages')
+
+    def readlines(self):
+        lst_in = list(map(str.strip, sys.stdin.readlines()))  # считывание списка строк из входного потока
+        sd = StreamData()
+        res = sd.create(self.FIELDS, lst_in)
+        return sd, res
+</code></pre>
+
+<p>Которым, затем, можно воспользоваться следующим образом:</p>
+
+<pre><code>sr = StreamReader()
+data, result = sr.readlines()
+</code></pre>
+
+<p>Необходимо перед классом StreamReader объявить еще один класс <strong>StreamData </strong>с методом:</p>
+
+<p>def create(self, fields, lst_values): ...</p>
+
+<p>который бы на входе получал кортеж FIELDS из названий локальных атрибутов (передается в атрибут fields) и список строк lst_in (передается в атрибут lst_values) и формировал бы в объекте класса StreamData локальные свойства с именами полей из fields и соответствующими значениями из lst_values.</p>
+
+<p>Если создание локальных свойств проходит успешно, то метод create() возвращает True, иначе - False. Если число полей и число строк не совпадает, то метод create() возвращает False и локальные атрибуты создавать не нужно.</p>
+
+<p>P.S. В программе нужно дополнительно объявить только класс StreamData. Больше ничего делать не нужно.</p>
+
+<p><strong>Пример входной информации (Sample Input):</strong></p>
+
+<p>10<br>
+Питон - основы мастерства<br>
+512</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

@@ -1,0 +1,47 @@
+<p><strong>Подвиг 9.</strong> Объявите класс Recipe для представления рецептов. Отдельные ингредиенты рецепта должны определяться классом Ingredient. Объекты этих классов должны создаваться командами:</p>
+
+<pre><code>ing = Ingredient(name, volume, measure)
+recipe = Recipe()
+recipe = Recipe(ing_1, ing_2,..., ing_N)</code></pre>
+
+<p>где ing_1, ing_2,..., ing_N - объекты класса Ingredient.</p>
+
+<p>В каждом объекте класса Ingredient должны создаваться локальные атрибуты:</p>
+
+<p>name - название ингредиента (строка);<br>
+volume - объем ингредиента в рецепте (вещественное число);<br>
+measure - единица измерения объема ингредиента (строка), например, литр, чайная ложка, грамм, штук и т.д.;</p>
+
+<p>С объектами класса Ingredient должна работать функция:</p>
+
+<pre><code>str(ing)  # название: объем, ед. изм.</code></pre>
+
+<p>и возвращать строковое представление объекта в формате:</p>
+
+<p>"название: объем, ед. изм."</p>
+
+<p>Например:</p>
+
+<pre><code>ing = Ingredient("Соль", 1, "столовая ложка")
+s = str(ing) # Соль: 1, столовая ложка</code></pre>
+
+<p>Класс Recipe должен иметь следующие методы:</p>
+
+<p><u>add_ingredient(ing)</u> - добавление нового ингредиента ing (объект класса Ingredient) в рецепт (в конец);<br>
+<u>remove_ingredient(ing)</u> - удаление ингредиента по объекту ing (объект класса Ingredient) из рецепта;<br>
+<u>get_ingredients()</u> - получение кортежа из объектов класса Ingredient текущего рецепта.</p>
+
+<p>Также с объектами класса Recipe должна поддерживаться функция:</p>
+
+<p><u>len(recipe)</u> - возвращает число ингредиентов в рецепте.</p>
+
+<p>Пример использования классов (эти строчки в программе писать не нужно):</p>
+
+<pre><code>recipe = Recipe()
+recipe.add_ingredient(Ingredient("Соль", 1, "столовая ложка"))
+recipe.add_ingredient(Ingredient("Мука", 1, "кг"))
+recipe.add_ingredient(Ingredient("Мясо баранины", 10, "кг"))
+ings = recipe.get_ingredients()
+n = len(recipe) # n = 3</code></pre>
+
+<p>P.S. На экран ничего выводить не нужно, только объявить классы.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

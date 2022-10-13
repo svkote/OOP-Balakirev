@@ -1,0 +1,40 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/zCD5_APRzes" rel="noopener noreferrer nofollow">https://youtu.be/zCD5_APRzes</a></p>
+
+<p><strong>Подвиг 7.</strong> Объявите класс ValidateString для проверки корректности переданной строки. Объекты этого класса создаются командой:</p>
+
+<pre><code>validate = ValidateString(min_length=3, max_length=100)</code></pre>
+
+<p>где <u>min_length</u> - минимальное число символов в строке; <u>max_length</u> - максимальное число символов в строке.<br>
+В классе ValidateString должен быть реализован метод:</p>
+
+<p><u>validate(self, string)</u> - возвращает True, если string является строкой (тип str) и длина строки в пределах [min_length; max_length]. Иначе возвращается False.</p>
+
+<p>Объявите дескриптор данных StringValue для работы со строками, объекты которого создаются командой:</p>
+
+<pre><code>st = StringValue(validator=ValidateString(min_length, max_length))</code></pre>
+
+<p>При каждом присвоении значения объекту st должен вызываться валидатор (объект класса ValidateString) и с помощью метода validate() проверяться корректность присваиваемых данных. Если данные некорректны, то присвоение не выполняется (игнорируется).</p>
+
+<p>Объявите класс RegisterForm с тремя объектами дескриптора StringValue:</p>
+
+<p>login = StringValue(...) - для ввода логина;<br>
+password = StringValue(...)  - для ввода пароля;<br>
+email = StringValue(...)  - для ввода Email.</p>
+
+<p>Объекты класса RegisterForm создаются командой:</p>
+
+<pre><code>form = RegisterForm(логин, пароль, email)</code></pre>
+
+<p>где логин, пароль, email - начальные значения логина, пароля и Email.<br>
+В классе RegisterForm также должны быть объявлены методы:</p>
+
+<p>get_fields() - возвращает список из значений полей в порядке [login, password, email];<br>
+show() - выводит в консоль многострочную строку в формате:</p>
+
+<p>&lt;form&gt;<br>
+Логин: &lt;login&gt;<br>
+Пароль: &lt;password&gt;<br>
+Email: &lt;email&gt;<br>
+&lt;/form&gt;</p>
+
+<p>P.S. В программе требуется объявить классы с описанным функционалом. На экран в программе выводить ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

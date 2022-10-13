@@ -1,0 +1,42 @@
+<p><strong>Подвиг 5.</strong> Объявите в программе следующие классы без содержимого (используйте оператор pass):</p>
+
+<p>Protists, Plants, Animals, Mosses, Flowering, Worms, Mammals, Human, Monkeys</p>
+
+<p>и постройте схему наследования в соответствии со следующей иерархией древа жизни:</p>
+
+<p style="text-align: center;"><img alt="" height="331" name="древо жизни.png" src="https://ucarecdn.com/652e0ebd-bd89-4cf1-8d95-e7db423df07d/" width="671"></p>
+
+<p>Затем, объявите в программе классы:</p>
+
+<p>Monkey - наследуется от Monkeys и служит для описания обезьян;<br>
+Person - наследуется от Human и служит для описания человека;<br>
+Flower - наследуется от Flowering и служит для описания цветка;<br>
+Worm - наследуется от Worms и служит для описания червей.</p>
+
+<p>Объекты этих классов должны создаваться командами:</p>
+
+<pre><code>obj = Monkey(name, weight, old)
+obj = Person(name, weight, old)
+obj = Flower(name, weight, old)
+obj = Worm(name, weight, old)</code></pre>
+
+<p>где <u>name</u> - наименование (или имя) объекта (строка); <u>weight</u> - вес (вещественное число); <u>old</u> - возраст (целое число). В каждом объекте любого из этих классов должны создаваться соответствующие атрибуты: name, weight, old.</p>
+
+<p>Создайте в программе следующие объекты и сохраните их в виде списка <strong>lst_objs</strong>:</p>
+
+<p>Monkey: "мартышка", 30.4, 7<br>
+Monkey: "шимпанзе", 24.6, 8<br>
+Person: "Балакирев", 88, 34<br>
+Person: "Верховный жрец", 67.5, 45<br>
+Flower: "Тюльпан", 0.2, 1<br>
+Flower: "Роза", 0.1, 2<br>
+Worm: "червь", 0.01, 1<br>
+Worm: "червь 2", 0.02, 1</p>
+
+<p>Затем, используя функции isinstance() и генератор списков (List comprehensions), сформируйте следующие списки из указанных объектов:</p>
+
+<p><strong>lst_animals</strong> - все объекты, относящиеся к животным (Animals);<br>
+<strong>lst_plants</strong> - все объекты, относящиеся к растениям (Plants);<br>
+<strong>lst_mammals</strong> - все объекты, относящиеся к млекопитающим (Mammals).</p>
+
+<p>P.S. В программе на экран выводить ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

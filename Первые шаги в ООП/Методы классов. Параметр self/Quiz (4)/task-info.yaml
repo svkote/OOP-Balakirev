@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Значения s1.is_empty и s2.is_empty будут совпадать и принимать значение True
+- text: Переменная b = s2.is_empty будет ссылаться на локальный атрибут is_empty объекта
+    s2
+- text: Последняя команда изменит атрибут is_empty класса String на значение True
+- text: Переменная a = s1.is_empty будет ссылаться на атрибут is_empty класса String
+- text: Последняя команда создаст локальное свойство is_empty со значением True в
+    экземпляре s2
+- text: Значение s1.is_empty будет по-прежнему False, а значение s2.is_empty примет
+    новое значение True
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

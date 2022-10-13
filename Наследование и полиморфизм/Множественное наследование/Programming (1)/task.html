@@ -1,0 +1,68 @@
+<p><strong>Подвиг 5. </strong>В программе объявлены два класса:</p>
+
+<pre><code>class ShopItem:
+    ID_SHOP_ITEM = 0
+
+    def __init__(self):
+        super().__init__()
+        ShopItem.ID_SHOP_ITEM += 1
+        self._id = ShopItem.ID_SHOP_ITEM
+
+    def get_pk(self):
+        return self._id
+
+
+class Book(ShopItem):
+    def __init__(self, title, author, year):
+        super().__init__()
+        self._title = title
+        self._author = author
+        self._year = year
+</code></pre>
+
+<p>Затем, создается объект класса Book (книга) и отображается в консоль:</p>
+
+<pre><code>book = Book("Python ООП", "Балакирев", 2022)
+print(book)</code></pre>
+
+<p>В результате, на экране увидим что то вроде:</p>
+
+<p>&lt;__main__.Book object at 0x0000015FBA4B3D00&gt;</p>
+
+<p>Но нам требуется, чтобы здесь отображались локальные атрибуты объекта с их значениями в формате:</p>
+
+<p>&lt;атрибут_1&gt;: &lt;значение_1&gt;<br>
+&lt;атрибут_2&gt;: &lt;значение_2&gt;<br>
+...<br>
+&lt;атрибут_N&gt;: &lt;значение_N&gt;</p>
+
+<p>Для этого вам дают задание разработать два класса:</p>
+
+<p><strong>ShopGenericView</strong> - для отображения всех локальных атрибутов объектов любых дочерних классов (не только Book);<br>
+<strong>ShopUserView</strong> - для отображения всех локальных атрибутов, кроме атрибута _id, объектов любых дочерних классов (не только Book).</p>
+
+<p>То есть, в этих классах нужно переопределить два магических метода: __str__() и __repr__().</p>
+
+<p>Пример использования классов (эти строчки в программе писать не нужно):</p>
+
+<pre><code>class Book(ShopItem, ShopGenericView): ...
+book = Book("Python ООП", "Балакирев", 2022)
+print(book)
+# на экране увидим строчки:
+# _id: 1
+# _title: Python ООП
+# _author: Балакирев
+# _year: 2022</code></pre>
+
+<p>Другой вариант использования классов:</p>
+
+<pre><code>class Book(ShopItem, ShopUserView): ...
+book = Book("Python ООП", "Балакирев", 2022)
+print(book)
+# на экране увидим строчки:
+# _title: Python ООП
+# _author: Балакирев
+# _year: 2022</code></pre>
+
+<p>P.S. В программе требуется объявить только классы. На экран выводить ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

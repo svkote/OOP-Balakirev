@@ -1,0 +1,13 @@
+type: code
+files:
+- name: task.py
+  visible: true
+  text: |-
+    # здесь объявляйте класс Money
+
+
+    my_money = Money(100)
+    your_money = Money(1000)
+  learner_created: false
+status: Unchecked
+record: -1

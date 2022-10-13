@@ -1,0 +1,21 @@
+<p><strong>Подвиг 5.</strong> Пусть в программе определен следующий класс:</p>
+
+<pre><code>class Index:
+    START_INDEX = 0
+
+    def __init__(self):
+        self.id = Index.START_INDEX
+        Index.START_INDEX += 1
+
+    def __hash__(self):
+        return hash(str(self.id))
+</code></pre>
+
+<p>И делается попытка создать словарь с ключами из объектов этого класса:</p>
+
+<pre><code>id1 = Index()
+id2 = Index()
+d = {id1: id1, id2: id2}</code></pre>
+
+<p>Выберите верное утверждение, связанное с этой программой.<br>
+ </p>

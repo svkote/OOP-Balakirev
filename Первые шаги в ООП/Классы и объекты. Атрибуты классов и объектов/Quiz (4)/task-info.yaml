@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Выведет значение None
+- text: Будет создан новый атрибут с именем id и значением None
+- text: Ошибка, так как атрибут id отсутствует в классе Magazine
+- text: Выведет значение False
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

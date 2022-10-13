@@ -1,0 +1,24 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/Y4Hvpg4FuKs" rel="noopener noreferrer nofollow">https://youtu.be/Y4Hvpg4FuKs</a></p>
+
+<p><strong>Подвиг 10 (на повторение).</strong> Объявите класс AppStore - интернет-магазин приложений для устройств под iOS. В этом классе должны быть реализованы следующие методы:</p>
+
+<p><u>add_application(self, app)</u> - добавление нового приложения app в магазин;<br>
+<u>remove_application(self, app)</u> - удаление приложения app из магазина;<br>
+<u>block_application(self, app)</u> - блокировка приложения app (устанавливает локальное свойство blocked объекта app в значение True);<br>
+<u>total_apps(self)</u> - возвращает общее число приложений в магазине.</p>
+
+<p>Класс AppStore предполагается использовать следующим образом (эти строчки в программе не писать):</p>
+
+<pre><code>store = AppStore()
+app_youtube = Application("Youtube")
+store.add_application(app_youtube)
+store.remove_application(app_youtube)</code></pre>
+
+<p>Здесь Application - класс, описывающий добавляемое приложение с указанным именем. Каждый объект класса Application должен содержать локальные свойства:</p>
+
+<p><u>name</u> - наименование приложения (строка);<br>
+<u>blocked</u> - булево значение (True - приложение заблокировано; False - не заблокировано, изначально False).</p>
+
+<p>Как хранить список приложений в объектах класса AppStore решите сами.</p>
+
+<p>P.S. В программе нужно только объявить классы с указанным функционалом.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

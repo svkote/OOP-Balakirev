@@ -1,0 +1,88 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/d5aNVdHGj44" rel="noopener noreferrer nofollow">https://youtu.be/d5aNVdHGj44</a></p>
+
+<p><strong>Подвиг 7 (введение в паттерн слушатель).</strong> Своей работой вы немного впечатлили начальство и оно поручило вам доделать паттерн слушатель (listener). Идея этого паттерна очень проста и основа реализуется следующим образом:</p>
+
+<pre><code>class Observer:
+    def update(self, data):
+        pass
+
+    def __hash__(self):
+        return hash(id(self))
+
+
+class Subject:
+    def __init__(self):
+        self.__observers = {}
+        self.__data = None
+
+    def add_observer(self, observer):
+        self.__observers[observer] = observer
+
+    def remove_observer(self, observer):
+        if observer in self.__observers:
+            self.__observers.pop(observer)
+
+    def __notify_observer(self):
+        for ob in self.__observers:
+            ob.update(self.__data)
+
+    def change_data(self, data):
+        self.__data = data
+        self.__notify_observer()
+</code></pre>
+
+<p>Здесь в объектах класса Subject можно зарегистрировать (добавить) множество объектов класса Observer (наблюдатель, слушатель). Это делается с помощью метода add_observer(). Затем, когда данные (self.__data) меняются путем вызова метода change_data() класса Subject, то у всех слушателей автоматически вызывается метод update(). В этом методе можно прописать самую разную логику работы при изменении данных в каждом конкретном слушателе.</p>
+
+<p>В проекте данный паттерн предполагается использовать для отображения информации о погоде в различных форматах:</p>
+
+<p>- текущая температура;<br>
+- текущее атмосферное давление;<br>
+- текущая влажность воздуха.</p>
+
+<p>Для этого сами данные определяются классом:</p>
+
+<pre><code>class Data:
+    def __init__(self, temp, press, wet):
+        self.temp = temp    # температура
+        self.press = press  # давление
+        self.wet = wet      # влажность</code></pre>
+
+<p>А вам поручается разработать дочерние классы, унаследованные от класса Observer, с именами:</p>
+
+<p><strong>TemperatureView</strong> - слушатель для отображения информации о температуре;<br>
+<strong>PressureView</strong> - слушатель для отображения информации о давлении;<br>
+<strong>WetView</strong> - слушатель для отображения информации о влажности.</p>
+
+<p>Каждый из этих классов должен переопределять метод update() базового класса так, чтобы выводилась в консоль информация в формате:</p>
+
+<p>TemperatureView: "Текущая температура &lt;число&gt;"<br>
+PressureView: "Текущее давление &lt;число&gt;"<br>
+WetView: "Текущая влажность &lt;число&gt;"</p>
+
+<p><strong>Важно: </strong><u>для вывода информации в консоль используйте функцию print() с одним аргументом в виде F-строки.</u></p>
+
+<p>Пример использования классов (эти строчки в программе писать не нужно):</p>
+
+<pre><code>subject = Subject()
+tv = TemperatureView()
+pr = PressureView()
+wet = WetView()
+
+subject.add_observer(tv)
+subject.add_observer(pr)
+subject.add_observer(wet)
+
+subject.change_data(Data(23, 150, 83))
+# выведет строчки:
+# Текущая температура 23
+# Текущее давление 150
+# Текущая влажность 83
+subject.remove_observer(wet)
+subject.change_data(Data(24, 148, 80))
+# выведет строчки:
+# Текущая температура 24
+# Текущее давление 148
+</code></pre>
+
+<p>P.S. В программе нужно объявить только классы. На экран выводить ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: 'при вызове get_div(1, 2) функция возвратит значение 0.5 и на экран будет
+    выведена строчка "finally: -1"'
+- text: 'при вызове get_div(1, 2) функция возвратит значение -1 (так как блок finally
+    выполняется до оператора return) и на экран будет выведена строчка "finally: -1"'
+- text: 'при вызове get_div(10, 0) функция возвратит значение 100 и на экран будет
+    выведена строчка "finally: -1"'
+- text: 'при вызове get_div(10, 0) функция возвратит значение -1 (так как блок finally
+    выполняется до оператора return) и на экран будет выведена строчка "finally: -1"'
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

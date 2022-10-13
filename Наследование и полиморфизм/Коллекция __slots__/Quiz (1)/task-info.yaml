@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: программа выполнится без ошибок, т.к. коллекция __slots__ отсутствует в классе
+    MoneyR, то в его объектах можно создавать любые локальные атрибуты
+- text: коллекция __slots__ накладывает ограничения на атрибуты объектов базового
+    класса Money, но не дочернего класса MoneyR
+- text: программа завершится с ошибкой, т.к. коллекция __slots__ будет унаследована
+    дочерним классом и локальный атрибут s не может быть создан
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

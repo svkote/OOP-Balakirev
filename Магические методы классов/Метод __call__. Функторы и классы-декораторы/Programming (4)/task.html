@@ -1,0 +1,31 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/wp4CyhdXcbY" rel="noopener noreferrer nofollow">https://youtu.be/wp4CyhdXcbY</a></p>
+
+<p><strong>Подвиг 6.</strong> Предположим, вам необходимо создать программу по преобразованию списка строк, например:</p>
+
+<pre><code>lst = ["Пункт меню 1", "Пункт меню 2", "Пункт меню 3"]</code></pre>
+
+<p>в следующий фрагмент HTML-разметки (многострочной строки, кавычки выводить не нужно):</p>
+
+<p>'''&lt;ul&gt;<br>
+&lt;li&gt;Пункт меню 1&lt;/li&gt;<br>
+&lt;li&gt;Пункт меню 2&lt;/li&gt;<br>
+&lt;li&gt;Пункт меню 3&lt;/li&gt;<br>
+&lt;/ul&gt;'''</p>
+
+<p>Для этого необходимо объявить класс RenderList, объекты которого создаются командой:</p>
+
+<pre><code>render = RenderList(type_list)</code></pre>
+
+<p>где <u>type_list</u> - тип списка (принимает значения: "ul" - для списка с тегом &lt;ul&gt; и "ol" - для списка с тегом &lt;ol&gt;). Если значение параметра type_list другое (не "ul" и не "ol"), то формируется список с тегом &lt;ul&gt;.</p>
+
+<p>Затем, предполагается использовать объект render следующим образом:</p>
+
+<pre><code>html = render(lst) # возвращается многострочная строка с соответствующей HTML-разметкой</code></pre>
+
+<p>Пример использования класса (эти строчки в программе писать не нужно):</p>
+
+<pre><code>lst = ["Пункт меню 1", "Пункт меню 2", "Пункт меню 3"]
+render = RenderList("ol")
+html = render(lst)</code></pre>
+
+<p>P.S. На экран ничего выводить не нужно. </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

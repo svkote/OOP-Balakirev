@@ -1,0 +1,11 @@
+type: code
+files:
+- name: task.py
+  visible: true
+  text: |-
+    from random import randint # функция для генерации целых случайных значений в диапазоне [a; b]
+
+    # здесь объявляйте класс RandomPassword
+  learner_created: false
+status: Unchecked
+record: -1

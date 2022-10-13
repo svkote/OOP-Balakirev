@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: исключения в процессе компиляции программы (синтаксические)
+- text: исключения в работе интерпретатора языка Python
+- text: исключения в работе интегрированной среды (например, PyCharm)
+- text: исключения в процессе выполнения программы (момента исполнения)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

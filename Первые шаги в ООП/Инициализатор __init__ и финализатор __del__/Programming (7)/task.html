@@ -1,0 +1,26 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/3WfWCBKRKIM" rel="noopener noreferrer nofollow">https://youtu.be/3WfWCBKRKIM</a></p>
+
+<p><strong>Подвиг 9. </strong>Вам необходимо реализовать односвязный список (<strong>не список языка Python, объекты в списке не хранить, а формировать связанную структуру, показанную на рисунке</strong>) из объектов класса ListObject:</p>
+
+<p style="text-align: center;"><img alt="" height="183" name="list_obj.png" src="https://ucarecdn.com/a4e74a9d-633b-41a2-ab5e-c39be1d915a5/" width="633"></p>
+
+<p>Для этого объявите в программе класс ListObject, объекты которого создаются командой:</p>
+
+<pre><code>obj = ListObject(data)</code></pre>
+
+<p>Каждый объект класса ListObject должен содержать локальные свойства:</p>
+
+<p><u>next_obj</u> - ссылка на следующий присоединенный объект (если следующего объекта нет, то next_obj = None);<br>
+<u>data</u> - данные объекта в виде строки.</p>
+
+<p>В самом классе ListObject должен быть объявлен метод:</p>
+
+<p><u>link(self, obj)</u> - для присоединения объекта obj такого же класса к текущему объекту self (то есть, атрибут next_obj объекта self должен ссылаться на obj).</p>
+
+<p>Прочитайте список строк из входного потока командой:</p>
+
+<pre><code>lst_in = list(map(str.strip, sys.stdin.readlines()))</code></pre>
+
+<p>Затем сформируйте односвязный список, в объектах которых (в атрибуте data) хранятся строки из списка lst_in (первая строка в первом объекте, вторая - во втором и  т.д.). На первый добавленный объект класса ListObject должна ссылаться переменная <strong>head_obj.</strong></p>
+
+<p>P.S. В программе что-либо выводить на экран не нужно.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">1. Первые шаги в ООП<br>1.1 Как правильно проходить этот курс<br>1.2 Концепция ООП простыми словами<br>1.3 Классы и объекты. Атрибуты классов и объектов<br>1.4 Методы классов. Параметр self<br>1.5 Инициализатор init и финализатор del<br>1.6 Магический метод new. Пример паттерна Singleton<br>1.7 Методы класса (classmethod) и статические методы (staticmethod)</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight"></code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: try/except/else/finally
+- text: try/except/finally
+- text: try/except/else
+- text: try/finally/except/else
+- text: try/except/finally/else
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

@@ -1,0 +1,46 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/IexoPrHUSaA" rel="noopener noreferrer nofollow">https://youtu.be/IexoPrHUSaA</a></p>
+
+<p><strong>Подвиг 4.</strong> Объявите класс с именем ValidatorString, объекты которого создаются командой:</p>
+
+<pre><code>vs = ValidatorString(min_length, max_length, chars)</code></pre>
+
+<p>где <u>min_length, max_length</u> - минимально и максимально допустимая длина строки (целые числа, формируемые диапазон [min_length; max_length]); <u>chars</u> - строка из набора символов (хотя бы один из них должен присутствовать в проверяемой строке). Если chars - пустая строка, то проверку на вхождение символов не делать.</p>
+
+<p>В самом классе ValidatorString объявите метод:</p>
+
+<p>def is_valid(self, string): ...</p>
+
+<p>который проверяет строку string на соответствие критериям: string должна быть строкой, с длиной в диапазоне [min_length; max_length] и в string присутствует хотя бы один символ из chars. Если хотя бы один из этих критериев не выполняется, то генерируется исключение командой:</p>
+
+<pre><code>raise ValueError('недопустимая строка')</code></pre>
+
+<p>Затем, объявите класс с именем LoginForm, объекты которого создаются командой:</p>
+
+<pre><code>lg = LoginForm(login_validator, password_validator)</code></pre>
+
+<p>где <u>login_validator</u> - валидатор для логина (объект класса ValidatorString); <u>password_validator</u> - валидатор для пароля (объект класса ValidatorString).</p>
+
+<p>В самом классе LoginForm объявите следующий метод:</p>
+
+<p>def form(self, request): ...</p>
+
+<p>где <u>request</u> - объект запроса (словарь). В словаре request должен быть ключ 'login' со значением введенного логина (строки) и ключ 'password' со значением введенного пароля (строка). Если хотя бы одного ключа нет, то генерировать исключение командой:</p>
+
+<pre><code>raise TypeError('в запросе отсутствует логин или пароль')</code></pre>
+
+<p>В противном случае (если проверка для request прошла), проверять корректность полученного формой логина и пароля с помощью валидаторов, указанных в параметрах login_validator и password_validator, при создании объекта формы.</p>
+
+<p>Если логин/пароль введены верно, то в объекте класса LoginForm локальным атрибутам <strong>_login</strong> и <strong>_password</strong> присвоить соответствующие значения.</p>
+
+<p>Пример использования классов (эти строчки должны быть в программе):</p>
+
+<pre><code>login_v = ValidatorString(4, 50, "")
+password_v = ValidatorString(10, 50, "!$#@%&amp;?")
+lg = LoginForm(login_v, password_v)
+login, password = input().split()
+try:
+    lg.form({'login': login, 'password': password})
+except (TypeError, ValueError) as e:
+    print(e)
+else:
+    print(lg._login)</code></pre><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">sergey balakirev!</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">sergey</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

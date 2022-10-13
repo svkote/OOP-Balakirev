@@ -1,0 +1,33 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/5aJVuJ5jGqk" rel="noopener noreferrer nofollow">https://youtu.be/5aJVuJ5jGqk</a></p>
+
+<p><strong>Подвиг 10 (на повторение материала).</strong> В программе предполагается реализовать парсер (обработчик) строки (string) в определенный выходной формат. Для этого объявлен следующий класс:</p>
+
+<pre><code>class Loader:
+    def parse_format(self, string, factory):
+        seq = factory.build_sequence()
+        for sub in string.split(","):
+            item = factory.build_number(sub)
+            seq.append(item)
+
+        return seq
+
+</code></pre>
+
+<p>И предполагается его использовать следующим образом:</p>
+
+<pre><code>ld = Loader()
+res = ld.parse_format("4, 5, -6.5", Factory())
+</code></pre>
+
+<p>На выходе (в переменной res) ожидается получить список из набора вещественных чисел. Например, для заданной строки, должно получиться:</p>
+
+<p>[4.0, 5.0, -6.5]</p>
+
+<p>Для реализации этой идеи необходимо вначале программы прописать класс Factory с двумя методами:</p>
+
+<p><u>build_sequence(self)</u> - для создания начального пустого списка (метод должен возвращать пустой список);<br>
+<u>build_number(self, string)</u> - для преобразования переданной в метод строки (string) в вещественное значение (метод должен возвращать полученное вещественное число).</p>
+
+<p>Объявите класс с именем Factory, чтобы получать на выходе искомый результат.</p>
+
+<p>P.S. В программе на экран ничего выводить не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

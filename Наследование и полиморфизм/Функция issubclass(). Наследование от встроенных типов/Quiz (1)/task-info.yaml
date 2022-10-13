@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: функция isinstance(phone, SmartPhone) вернет True, так как объект phone связан
+    с базовым классом SmartPhone
+- text: функция issubclass(IPhone, object) вернет True, так как все классы в Python
+    3.x неявно наследуются от класса object
+- text: функция issubclass(IPhone, SmartPhone) вернет True, так как IPhone является
+    подклассом класса SmartPhone
+- text: функция issubclass(SmartPhone, IPhone) вернет True, так как SmartPhone связан
+    с дочерним классом IPhone
+- text: функция issubclass(SmartPhone, IPhone) вернет False, так как SmartPhone является
+    базовым классом для класса IPhone
+- text: функция issubclass(phone, SmartPhone) вернет True, так как объект phone связан
+    с базовым классом SmartPhone
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

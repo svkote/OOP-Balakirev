@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: при выполнении программы на экране будет отображена строка "соединение с принтером
+    отсутствует"
+- text: последний блок except с классом PrinterError никогда выполнен не будет ни
+    при каких типах исключений
+- text: при возникновении исключений PrinterConnectionError или PrinterPageError выполнение
+    программы перейдет в блок except с этими двумя классами
+- text: блок except с двумя классами PrinterConnectionError и PrinterPageError записывать
+    нельзя, возникнет ошибка
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

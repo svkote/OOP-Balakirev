@@ -1,0 +1,21 @@
+<p><strong>Подвиг 2.</strong> В программе объявлены два класса следующим образом:</p>
+
+<pre><code>class Table:
+    def __init__(self, model, color):
+        self.model = model
+        self.color = color
+
+
+class RoundTable(Table):
+    def __init__(self, model, color, radius, height):
+        super().__init__(model, color)
+        self.radius = radius
+        self.height = height
+</code></pre>
+
+<p>И создается объект класса RoundTable:</p>
+
+<pre><code>rt = RoundTable('PC', 'brown', 500, 750)</code></pre>
+
+<p>Выберите все верные утверждения, связанные с этим фрагментом программы.<br>
+ </p>

@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: только метод set_data()
+- text: методы update() и set_data()
+- text: только метод update()
+- text: только метод abstract()
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

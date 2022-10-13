@@ -1,0 +1,28 @@
+<p><strong>Подвиг 4.</strong> Объявите класс WordString, объекты которого создаются командами:</p>
+
+<pre><code>w1 = WordString()
+w2 = WordString(string)</code></pre>
+
+<p>где <u>string</u> - передаваемая строка. Например:</p>
+
+<pre><code>words = WordString("Курс по Python ООП")</code></pre>
+
+<p>Реализовать следующий функционал для объектов этого класса:</p>
+
+<p><u>len(words)</u> - должно возвращаться число слов в переданной строке (слова разделяются одним или несколькими пробелами);<br>
+<u>words(indx)</u> - должно возвращаться слово по его индексу (indx - порядковый номер слова в строке, начиная с 0).</p>
+
+<p>Также в классе WordString реализовать объект-свойство (property):</p>
+
+<p><u>string</u> - для передачи и считывания строки.</p>
+
+<p>Пример пользования классом WordString (эти строчки в программе писать не нужно):</p>
+
+<pre><code>words = WordString()
+words.string = "Курс по Python ООП"
+n = len(words)
+first = "" if n == 0 else words(0)
+print(words.string)
+print(f"Число слов: {n}; первое слово: {first}")</code></pre>
+
+<p>P.S. В программе нужно только объявить класс, выводить в консоль ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

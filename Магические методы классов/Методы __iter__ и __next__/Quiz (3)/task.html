@@ -1,0 +1,28 @@
+<p><strong>Подвиг 4.</strong> Добавим в класс реализации геометрической прогрессии еще один магический метод __iter__():</p>
+
+<pre><code>class GeomRange:
+    def __init__(self, start, step, stop):
+        self.start = start
+        self.step = step
+        self.stop = stop
+        self.__value = self.start
+
+    def __next__(self):
+        if self.__value &lt; self.stop:
+            ret_value = self.__value
+            self.__value *= self.step
+            return ret_value
+        else:
+            raise StopIteration
+
+    def __iter__(self):
+        self.__value = self.start
+        return self
+</code></pre>
+
+<p>Далее, создается объект этого класса командой:</p>
+
+<pre><code>g = GeomRange(1, 1.2, 2)</code></pre>
+
+<p>Отметьте все строчки, которые будут выполнены без ошибок для такого измененного объекта.<br>
+ </p>

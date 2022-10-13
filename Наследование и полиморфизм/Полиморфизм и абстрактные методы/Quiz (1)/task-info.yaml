@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: полиморфизм встроен в Python через механизм ссылок (каждая переменная - это
+    ссылка на данные любого существующего в программе типа)
+- text: полиморфизм можно реализовать только через механизм наследования, используя
+    единый базовый класс
+- text: полиморфизм - это процесс (возможность) создания множества объектов одного
+    и того же класса
+- text: полиморфизм - это возможность через единый интерфейс взаимодействовать с объектами
+    разных типов
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

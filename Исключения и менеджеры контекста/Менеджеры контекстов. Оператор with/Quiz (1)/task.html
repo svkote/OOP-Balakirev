@@ -1,0 +1,24 @@
+<p><strong>Подвиг 6 (на повторение).</strong> Имеется следующий фрагмент программы:</p>
+
+<pre><code>class PrinterError(Exception):
+    """Класс общих ошибок принтера"""
+
+
+class PrinterConnectionError(PrinterError):
+    """Ошибка соединения с принтером"""
+
+
+class PrinterPageError(PrinterError):
+    """Ошибка отсутствия бумаги в принтере"""
+
+
+try:
+    raise PrinterConnectionError('соединение с принтером отсутствует')
+except (PrinterConnectionError, PrinterPageError) as e:
+    print(e)
+except PrinterError as e:
+    print(e)
+</code></pre>
+
+<p>Выберите все верные утверждения, связанные с этой программой.<br>
+ </p>

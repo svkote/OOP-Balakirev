@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: если в программу после строчки m.money = 10 добавить строчку m.__dict__['money']
+    = 100, то при считывании значения res = m.money получим число 100
+- text: в строчке money = property(get_money, set_money) создается объект-свойство
+    с геттером get_money и сеттером set_money
+- text: в строчке m.money = 10 происходит создание локального свойства money в объекте
+    m с присвоением значения 10
+- text: в строчке money = property(get_money, set_money) создается объект-свойство
+    с геттером set_money и сеттером get_money
+- text: в строчке m.money = 10 происходит вызов метода set_money и локальной переменной
+    __money присваивается значение 10
+- text: для считывания информации из локальной переменной __money достаточно записать
+    res = m.money
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

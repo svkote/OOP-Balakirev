@@ -1,0 +1,15 @@
+type: code
+custom_name: Programming
+files:
+- name: task.py
+  visible: true
+  text: |-
+    # здесь объявляйте класс
+
+
+    digits = list(map(float, input().split()))  # эту строчку не менять (коллекцию digits также не менять)
+
+    # здесь создавайте объект класса
+  learner_created: false
+status: Unchecked
+record: -1

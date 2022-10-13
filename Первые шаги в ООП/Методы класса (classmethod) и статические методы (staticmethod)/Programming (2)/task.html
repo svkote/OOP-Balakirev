@@ -1,0 +1,21 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/9766M0dS1qc" rel="noopener noreferrer nofollow">https://youtu.be/9766M0dS1qc</a></p>
+
+<p><strong>Подвиг 8. </strong>Объявите класс CardCheck для проверки корректности информации на пластиковых картах. Этот класс должен иметь следующие методы:</p>
+
+<p><u>check_card_number(number)</u> - проверяет строку с номером карты и возвращает булево значение True, если номер в верном формате и False - в противном случае. Формат номера следующий: XXXX-XXXX-XXXX-XXXX, где X - любая цифра (от 0 до 9).<br>
+<u>check_name(name)</u> - проверяет строку name с именем пользователя карты. Возвращает булево значение True, если имя записано верно и False - в противном случае.</p>
+
+<p>Формат имени: два слова (имя и фамилия) через пробел, записанные заглавными латинскими символами и цифрами. Например, SERGEI BALAKIREV.</p>
+
+<p>Предполагается использовать класс CardCheck следующим образом (эти строчки в программе не писать):</p>
+
+<pre><code>is_number = CardCheck.check_card_number("1234-5678-9012-0000")
+is_name = CardCheck.check_name("SERGEI BALAKIREV")</code></pre>
+
+<p>Для проверки допустимых символов в классе должен быть прописан атрибут:</p>
+
+<pre><code>CHARS_FOR_NAME = ascii_lowercase.upper() + digits</code></pre>
+
+<p>Подумайте, как правильнее объявить методы check_card_number и check_name (декораторами @classmethod и @staticmethod).</p>
+
+<p>P.S. В программе только объявить класс. На экран ничего выводить не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

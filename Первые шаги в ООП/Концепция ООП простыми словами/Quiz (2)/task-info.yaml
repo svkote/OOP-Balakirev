@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: элементы родительских классов случайным образом перемешиваются при формировании
+    новых (дочерних) классов
+- text: на основе одного или нескольких классов создается новый (дочерний) класс
+- text: наследование позволяет как бы вынести «за скобки» общее для разных классов
+- text: на основе одного или нескольких объектов классов создаются новые (дочерние)
+    объекты
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Solved
+record: -1
+custom_name: Quiz
+local_check: false

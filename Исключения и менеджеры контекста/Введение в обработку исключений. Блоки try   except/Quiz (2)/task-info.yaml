@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: res_1 равно числу -5; res_2 равно числу 5.78; res_3 равно строке '8(912)000-000-00'
+- text: при передаче функции get_number() вещественного значения она завершится с
+    ошибкой, т.к. сначала нужно делать преобразование в вещественный тип (float),
+    а затем - в целочисленный
+- text: при вызове функции get_number(True) она возвратит значение True
+- text: при передаче функции get_number() аргумента, который может быть преобразован
+    в целое или вещественное число, будет возвращено число, иначе возвращается переданное
+    значение x без изменений
+- text: при вызове функции get_number(True) она возвратит значение 1
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

@@ -1,0 +1,4 @@
+content:
+- Режимы доступа public, private, protected. Сеттеры и геттеры
+- Свойства property. Декоратор @property
+- Дескрипторы (data descriptor и non-data descriptor)

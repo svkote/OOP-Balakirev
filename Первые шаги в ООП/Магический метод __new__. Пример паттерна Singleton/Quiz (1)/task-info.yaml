@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: булево значение True
+- text: ссылку на инициализатор __init__
+- text: адрес нового созданного объекта
+- text: ничего не должен возвращать
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

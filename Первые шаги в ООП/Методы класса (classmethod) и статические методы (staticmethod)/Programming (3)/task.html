@@ -1,0 +1,21 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/YkDq9p8n17A" rel="noopener noreferrer nofollow">https://youtu.be/YkDq9p8n17A</a></p>
+
+<p><strong>Подвиг 9.</strong> Объявите в программе класс <strong>Video </strong>с двумя методами:</p>
+
+<p><u>create(self, name)</u> - для задания имени name текущего видео (метод сохраняет имя name в локальном атрибуте <strong>name</strong> объекта класса Video);<br>
+<u>play(self)</u> - для воспроизведения видео (метод выводит на экран строку "воспроизведение видео &lt;name&gt;").</p>
+
+<p>Объявите еще один класс с именем <strong>YouTube</strong>, в котором объявите два метода (с декоратором @classmethod):</p>
+
+<p>add_video(cls, video) - для добавления нового видео (метод помещает объект video класса Video в список);<br>
+play(cls, video_indx) - для проигрывания видео из списка по указанному индексу (индексация с нуля).</p>
+
+<p>(здесь cls - ссылка на класс YouTube). И список (тоже внутри класса YouTube):</p>
+
+<p>videos - для хранения добавленных объектов класса Video (изначально список пуст).</p>
+
+<p>Метод play() класса YouTube должен обращаться к объекту класса Video по индексу списка videos и, затем, вызывать метод play() класса Video.</p>
+
+<p>Методы add_video и play вызывайте напрямую из класса YouTube. Создавать экземпляр этого класса не нужно.</p>
+
+<p>Создайте два объекта <strong>v1</strong> и <strong>v2</strong> класса Video, затем, через метод create() передайте им имена "Python" и "Python ООП". После этого с помощью метода add_video класса YouTube, добавьте в него эти два видео и воспроизведите (с помощью метода play класса YouTube) сначала первое, а затем, второе видео.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight"></code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">воспроизведение видео Python<br>воспроизведение видео Python ООП</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

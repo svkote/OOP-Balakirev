@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: программа завершится с ошибкой, так как коллекция __slots__ не наследуется
+    и в объекте m дочернего класса MoneyR допустим только атрибут _value
+- text: программа выполнится без ошибок, так как коллекция __slots__ дочернего класса
+    расширяет коллекцию __slots__ базового класса и атрибуты с именами _money и _value
+    допустимы
+- text: программа завершится с ошибкой, так как коллекция __slots__ базового класса
+    имеет приоритет и __slots__ дочернего класса будет проигнорирована
+- text: если в классе MoneyR прописать __slots__ = '_value', '_money', а в базовом
+    классе убрать определение __slots__, то поведение объекта m дочернего класса MoneyR
+    не изменится
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

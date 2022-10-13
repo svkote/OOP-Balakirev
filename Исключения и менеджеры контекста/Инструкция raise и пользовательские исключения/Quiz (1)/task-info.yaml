@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: команда raise error записана неверно, т.к. после оператора raise следует указывать
+    имя класса исключения, а не его объект
+- text: при выполнении команды raise error на экран будет выведено сообщение "превышение
+    лимита нагрузки"
+- text: объект класса LimitException создан не будет, т.к. в классе LimitException
+    отсутствует какой-либо инициализатор с параметром
+- text: при выполнении команды raise error на экран будет выведено сообщение "Превышение
+    лимита"
+- text: команда raise error сгенерирует исключение типа LimitException
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

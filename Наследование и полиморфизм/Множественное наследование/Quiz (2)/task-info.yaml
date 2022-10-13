@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: программа выполнится успешно, будет создан объект person с набором указанных
+    локальных атрибутов
+- text: программа будет успешно выполняться вне зависимости от порядка наследования
+    классов A и B в дочернем классе C
+- text: 'программа будет успешно работать, только если поменять порядок наследования
+    классов в дочернем классе C, то есть, записав его объявление как class C(A, B):
+    ...'
+- text: в момент создания объекта person произойдет ошибка, так как аргументы name,
+    old предназначены для инициализатора класса A, а первым вызывается инициализатор
+    класса B
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

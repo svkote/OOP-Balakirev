@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: it = iter(g); res = next(g)
+- text: res = next(g)
+- text: 'for x in g: print(x);      for x in g: print(x)'
+- text: 'for x in g: print(x)'
+- text: res = next(g); res = next(g)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

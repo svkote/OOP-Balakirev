@@ -1,0 +1,17 @@
+<p><strong>Подвиг 2.</strong> В программе определен следующий класс:</p>
+
+<pre><code>class Way:
+    def __init__(self, length):
+        self.length = length
+
+    def __add__(self, other):
+        return Way(self.length + other.length)
+</code></pre>
+
+<p>И создаются два объекта:</p>
+
+<pre><code>w1 = Way(5)
+w2 = Way(10)</code></pre>
+
+<p>Выберите все верные строчки программы при работе с объектами w1 и w2 (те, что не приводят к ошибкам во время выполнения).<br>
+ </p>

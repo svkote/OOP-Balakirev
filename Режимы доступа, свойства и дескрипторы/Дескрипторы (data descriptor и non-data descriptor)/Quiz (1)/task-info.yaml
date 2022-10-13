@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: один класс дескриптора способен заменить множество однотипных объектов-свойств
+- text: дескрипторы содержат объекты-свойства, т.е. они их как бы объединяют в одном
+    классе
+- text: дескрипторы построены на объекта-свойствах и это, по сути, одно и то же
+- text: в одном классе дескриптора можно единожды описать логику взаимодействия с
+    внутренними (приватными или защищенными) переменными
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

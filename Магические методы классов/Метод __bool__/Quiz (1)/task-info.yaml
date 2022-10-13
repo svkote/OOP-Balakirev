@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: bool(user1) вернет значение False, так как будет вызван магический метод __bool__(),
+    который вернет False
+- text: bool(user2) вернет значение False, так как будет вызван магический метод __bool__(),
+    который вернет False
+- text: bool(user2) вернет значение True, так как магический метод __len__() имеет
+    приоритет над методом __bool__(), а __len__() возвращает ненулевое значение, то
+    есть, True
+- text: bool(user1) вернет значение True, так как будет вызван магический метод __bool__(),
+    который вернет True
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

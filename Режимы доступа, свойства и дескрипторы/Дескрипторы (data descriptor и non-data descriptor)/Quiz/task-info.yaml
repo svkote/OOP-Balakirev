@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: это любой класс, в котором объявлены специальные методы __get__ и __set__
+- text: это любой класс, в котором объявлены специальные методы __get__, __set__ и/или
+    __del__
+- text: это класс, в котором определены только объекты-свойства (property)
+- text: это класс, в котором обязательно прописан инициализатор __init__ и финализатор
+    __del__
+- text: это любой класс, в котором объявлен специальный метод __get__
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

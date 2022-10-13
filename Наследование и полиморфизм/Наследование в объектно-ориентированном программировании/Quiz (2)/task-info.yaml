@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: rt.set_model_and_color('Home', 'red')
+- text: h = tb.height
+- text: color = rt.color
+- text: tb.set_params('PC', 'brown', 500, 750)
+- text: m = tb.model
+- text: rt.set_params('Home', 'red', 700, 1000)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

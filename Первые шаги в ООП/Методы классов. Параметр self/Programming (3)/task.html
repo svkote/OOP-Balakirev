@@ -1,0 +1,44 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/ljahVEppmxM" rel="noopener noreferrer nofollow">https://youtu.be/ljahVEppmxM</a></p>
+
+<p><strong>Подвиг 9.</strong> Из входного потока читаются строки данных с помощью команды:</p>
+
+<pre><code>lst_in = list(map(str.strip, sys.stdin.readlines()))  # считывание списка строк из входного потока</code></pre>
+
+<p>в формате: id, name, old, salary (записанные через пробел). Например:</p>
+
+<p>1 Сергей 35 120000<br>
+2 Федор 23 12000<br>
+3 Иван 13 1200<br>
+...</p>
+
+<p>То есть, каждая строка - это элемент списка lst_in.</p>
+
+<p>Необходимо в класс DataBase:</p>
+
+<pre><code>class DataBase:
+    lst_data = []
+    FIELDS = ('id', 'name', 'old', 'salary')
+</code></pre>
+
+<p>добавить два метода:</p>
+
+<p>select(self, a, b) - возвращает список из элементов списка lst_data в диапазоне [a; b] (включительно) по их индексам (не id, а <strong>индексам списка</strong>); также учесть, что граница b может превышать длину списка.<br>
+insert(self, data) - для добавления в список lst_data новых данных из переданного списка строк data;</p>
+
+<p>Каждая запись в списке lst_data должна быть представлена словарем в формате:</p>
+
+<p>{'id': 'номер', 'name': 'имя', 'old': 'возраст', 'salary': 'зарплата'}</p>
+
+<p>Например:</p>
+
+<p>{'id': '1', 'name': 'Сергей', 'old': '35', 'salary': '120000'}</p>
+
+<p><strong>Примечание:</strong> в этой задаче число элементов в строке (разделенных пробелом) всегда совпадает с числом полей в коллекции FIELDS.</p>
+
+<p>P. S. Ваша задача только добавить два метода в класс DataBase.</p>
+
+<p><strong>Sample Input:</strong></p>
+
+<pre>1 Сергей 35 120000
+2 Федор 23 12000
+3 Иван 13 1200</pre><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

@@ -1,0 +1,23 @@
+<p><strong>Подвиг 2.</strong> Объявите класс с именем Book (книга), объекты которого создаются командой:</p>
+
+<pre><code>book = Book(title, author, pages)</code></pre>
+
+<p>где <u>title</u> - название книги (строка); <u>author</u> - автор книги (строка); <u>pages</u> - число страниц в книге (целое число).</p>
+
+<p>Также при выводе информации об объекте на экран командой:</p>
+
+<pre><code>print(book)</code></pre>
+
+<p>должна отображаться строчка в формате:</p>
+
+<p>"Книга: {title}; {author}; {pages}"</p>
+
+<p>Например:</p>
+
+<p>"Книга: Муму; Тургенев; 123"</p>
+
+<p>Прочитайте из входного потока строки с информацией по книге командой:</p>
+
+<pre><code>lst_in = list(map(str.strip, sys.stdin.readlines()))</code></pre>
+
+<p>(строки идут в порядке: title, author, pages). Создайте объект класса Book и выведите его строковое представление в консоль.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">Python ООП<br>Балакирев С.М.<br>1024</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Книга: Python ООП; Балакирев С.М.; 1024</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

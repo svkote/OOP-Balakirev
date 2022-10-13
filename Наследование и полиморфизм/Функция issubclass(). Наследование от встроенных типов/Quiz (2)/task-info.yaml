@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: функция issubclass(cls1, cls2) возвращает True, если класс cls1 является подклассом
+    класса cls2
+- text: функция isinstance(obj, cls) возвращает True, если объект obj является объектом
+    класса cls но не его базовых классов
+- text: функция issubclass(obj, cls) возвращает True, если объект obj является объектом
+    класса cls или какого-либо его базовых классов
+- text: функция issubclass(cls1, cls2) возвращает True, если класс cls1 является подклассом
+    класса cls2 но не его базовых классов
+- text: функция isinstance(obj, cls) возвращает True, если объект obj является объектом
+    класса cls
+- text: функция isinstance(cls1, cls2) возвращает True, если класс cls1 является подклассом
+    класса cls2 или какого-либо его базовых классов
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

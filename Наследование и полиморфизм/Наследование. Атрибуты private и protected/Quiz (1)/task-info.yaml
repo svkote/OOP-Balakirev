@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: программа отработает без ошибок и в консоль будет выведена информация по модели
+    и размеру памяти
+- text: приватная переменная __model доступна только внутри класса Phone и недоступна
+    в классе SmartPhone
+- text: в момент создания объекта phone произойдет ошибка, так как приватная переменная
+    __model должна объявляться в классе SmartPhone
+- text: в момент вызова метода get_info() произойдет ошибка, так как локальный атрибут
+    __model отсутствует в классе SmartPhone
+- text: программа будет работать без ошибок, если метод get_info() поместить в базовый
+    класс Phone
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

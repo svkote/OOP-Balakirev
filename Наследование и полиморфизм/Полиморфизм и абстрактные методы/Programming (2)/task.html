@@ -1,0 +1,36 @@
+<p><strong>Подвиг 5.</strong> Ранее вы уже создавали классы валидации в виде иерархии базового класса Validator и дочерних:</p>
+
+<p>StringValidator<br>
+IntegerValidator<br>
+FloatValidator</p>
+
+<p>для валидации (проверки) корректности данных. Повторим этот функционал с некоторыми изменениями.</p>
+
+<p>Итак, вначале нужно объявить базовый класс <strong>Validator</strong>, в котором должен отсутствовать инициализатор (магический метод __init__) и объявлен метод со следующей сигнатурой:</p>
+
+<p>def _is_valid(self, data): ...</p>
+
+<p>По идее, этот метод возвращает булево значение True, если данные (data) корректны с точки зрения валидатора, и False - в противном случае. Но в базовом классе Validator он должен генерировать исключение командой:</p>
+
+<pre><code>raise NotImplementedError('в классе не переопределен метод _is_valid')</code></pre>
+
+<p>Затем, нужно объявить дочерний класс <strong>FloatValidator</strong> для валидации вещественных чисел. Объекты этого класса создаются командой:</p>
+
+<pre><code>float_validator = FloatValidator(min_value, max_value)</code></pre>
+
+<p>где <u>min_value</u> - минимально допустимое значение; <u>max_value</u> - максимально допустимое значение.</p>
+
+<p>Пользоваться объектами класса FloatValidator предполагается следующим образом:</p>
+
+<pre><code>res = float_validator(value)</code></pre>
+
+<p>где <u>value</u> - проверяемое значение (должно быть вещественным и находиться в диапазоне [min_value; max_value]). Данный валидатор должен возвращать True, если значение value проходит проверку, и False - в противном случае.</p>
+
+<p>Пример использования классов (эти строчки писать не нужно):</p>
+
+<pre><code>float_validator = FloatValidator(0, 10.5)
+res_1 = float_validator(1)  # False (целое число, а не вещественное)
+res_2 = float_validator(1.0)  # True
+res_3 = float_validator(-1.0)  # False (выход за диапазон [0; 10.5])</code></pre>
+
+<p>P.S. В программе требуется объявить только классы. На экран выводить ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

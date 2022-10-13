@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: нет, ООП - неотъемлемая часть больших приложений
+- text: да, например, используя парадигму структурного программирования (не включая
+    ООП)
+- text: можно, но тогда придется отказаться от функционального подхода к программированию
+- text: да, но только относительно простые
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Solved
+record: -1
+custom_name: Quiz
+local_check: false

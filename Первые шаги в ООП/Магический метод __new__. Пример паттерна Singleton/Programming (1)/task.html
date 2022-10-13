@@ -1,0 +1,15 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/uE1uf7Qtbh4" rel="noopener noreferrer nofollow">https://youtu.be/uE1uf7Qtbh4</a></p>
+
+<p><strong>Подвиг 7.</strong> Объявите класс SingletonFive, с помощью которого можно было бы создавать объекты командой:</p>
+
+<pre><code>a = SingletonFive(&lt;наименование&gt;)</code></pre>
+
+<p>Здесь &lt;наименование&gt; - это данные, которые сохраняются в локальном свойстве name созданного объекта.</p>
+
+<p>Этот класс должен формировать только первые пять объектов. Остальные (шестой, седьмой и т.д.) должны быть ссылкой на последний (пятый) созданный объект.</p>
+
+<p>Создайте первые десять объектов класса SingletonFive с помощью следующего фрагмента программы:</p>
+
+<pre><code>objs = [SingletonFive(str(n)) for n in range(10)]</code></pre>
+
+<p>P.S. В программе на экран ничего выводить не нужно. </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

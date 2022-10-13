@@ -1,0 +1,35 @@
+<p><strong>Подвиг 7 (на повторение).</strong> Перед вами стоит задача выделения файлов с определенными расширениями из списка файлов, например:</p>
+
+<pre><code>filenames = ["boat.jpg", "ans.web.png", "text.txt", "www.python.doc", "my.ava.jpg", "forest.jpeg", "eq_1.png", "eq_2.xls"]</code></pre>
+
+<p>Для этого необходимо объявить класс FileAcceptor, объекты которого создаются командой:</p>
+
+<pre><code>acceptor = FileAcceptor(ext1, ..., extN)</code></pre>
+
+<p>где ext1, ..., extN - строки с допустимыми расширениями файлов, например: 'jpg', 'bmp', 'jpeg'.</p>
+
+<p>После этого предполагается использовать объект acceptor в стандартной функции filter языка Python следующим образом:</p>
+
+<pre><code>filenames = list(filter(acceptor, filenames))</code></pre>
+
+<p>То есть, объект acceptor должен вызываться как функция:</p>
+
+<pre><code>acceptor(filename) </code></pre>
+
+<p>и возвращать True, если файл с именем filename содержит расширения, указанные при создании acceptor, и False - в противном случае. Кроме того, с объектами класса FileAcceptor должен выполняться оператор:</p>
+
+<pre><code>acceptor12 = acceptor1 + acceptor2</code></pre>
+
+<p>Здесь формируется новый объект acceptor12 с уникальными расширениями первого и второго объектов. Например:</p>
+
+<pre><code>acceptor1 = FileAcceptor("jpg", "jpeg", "png")
+acceptor2 = FileAcceptor("png", "bmp")
+acceptor12 = acceptor1 + acceptor2    # ("jpg", "jpeg", "png", "bmp")</code></pre>
+
+<p>Пример использования класса (эти строчки в программе писать не нужно):</p>
+
+<pre><code>acceptor_images = FileAcceptor("jpg", "jpeg", "png")
+acceptor_docs = FileAcceptor("txt", "doc", "xls")
+filenames = list(filter(acceptor_images + acceptor_docs, filenames))</code></pre>
+
+<p>P.S. На экран в программе ничего выводить не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

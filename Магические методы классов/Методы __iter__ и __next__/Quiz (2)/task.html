@@ -1,0 +1,24 @@
+<p><strong>Подвиг 3.</strong> Пусть в программе объявлен класс для реализации геометрической прогрессии:</p>
+
+<pre><code>class GeomRange:
+    def __init__(self, start, step, stop):
+        self.start = start
+        self.step = step
+        self.stop = stop
+        self.__value = self.start
+
+    def __next__(self):
+        if self.__value &lt; self.stop:
+            ret_value = self.__value
+            self.__value *= self.step
+            return ret_value
+        else:
+            raise StopIteration
+</code></pre>
+
+<p>И создается объект этого класса командой:</p>
+
+<pre><code>g = GeomRange(1, 1.2, 2)</code></pre>
+
+<p>Отметьте все строчки, которые будут выполнены без ошибок.<br>
+ </p>

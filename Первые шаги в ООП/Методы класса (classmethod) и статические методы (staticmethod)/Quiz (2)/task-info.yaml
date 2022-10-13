@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: res = m.sqrt(2)
+- text: res = Math.sqrt(m, 4)
+- text: res = Math.sqrt(4)
+- text: m.Math.sqrt(3)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

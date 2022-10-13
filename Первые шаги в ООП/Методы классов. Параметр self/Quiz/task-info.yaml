@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Любая переменная, объявленная внутри класса
+- text: Любая (не статическая) функция, объявленная внутри класса
+- text: 'Такого термина в ООП нет '
+- text: Переменные и функции внутри класса
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

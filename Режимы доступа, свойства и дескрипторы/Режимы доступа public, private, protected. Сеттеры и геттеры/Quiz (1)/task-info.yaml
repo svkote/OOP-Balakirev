@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: это приватные методы для считывания и записи значений в приватные переменные
+    класса или его объектов
+- text: сеттеры - это публичные методы класса, объявленные с декоратором @setter,
+    а геттеры - аналогичные методы класса, объявленные с декоратором @getter
+- text: это публичные методы для считывания и записи значений в приватные переменные
+    класса или его объектов
+- text: это все публичные атрибуты класса или объектов, с которыми можно работать
+    напрямую извне (классов и объектов)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

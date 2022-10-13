@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: дескриптор данных (data descriptor), когда в классе присутствуют методы __get__
+    и __set__
+- text: дескриптор данных (data descriptor), когда в классе присутствует метод __get__,
+    но отсутствует метод __set__
+- text: дескриптор не данных (non-data descriptor), когда в классе присутствует метод
+    __get__, но отсутствует метод __set__
+- text: дескриптор не данных (non-data descriptor), когда в классе присутствуют методы
+    __get__ и __set__
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: это когда внутри одного класса объявляется несколько других классов
+- text: это когда от одного базового класса объявляется несколько дочерних классов
+- text: это когда один дочерний класс непосредственно наследуется от нескольких базовых
+- text: 'это когда формируется цепочка наследования из нескольких классов: A -&gt;
+    B -&gt; C и т. д.'
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

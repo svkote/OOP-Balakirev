@@ -1,0 +1,45 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/0vmRMf5f4Iw" rel="noopener noreferrer nofollow">https://youtu.be/0vmRMf5f4Iw</a></p>
+
+<p><strong>Подвиг 10.</strong> Объявите в программе класс FloatValidator, объекты которого создаются командой:</p>
+
+<pre><code>fv = FloatValidator(min_value, max_value)</code></pre>
+
+<p>где min_value, max_value - минимальное и максимальное допустимое значение (диапазон [min_value; max_value]).</p>
+
+<p>Объекты этого класса предполагается использовать следующим образом:</p>
+
+<pre><code>fv(value)</code></pre>
+
+<p>где value - проверяемое значение. Если value не вещественное число или не принадлежит диапазону [min_value; max_value], то генерируется исключение командой:</p>
+
+<pre><code>raise ValueError('значение не прошло валидацию')</code></pre>
+
+<p>По аналогии, объявите класс IntegerValidator, объекты которого создаются командой:</p>
+
+<pre><code>iv = IntegerValidator(min_value, max_value)</code></pre>
+
+<p>и используются командой:</p>
+
+<pre><code>iv(value)</code></pre>
+
+<p>Здесь также генерируется исключение:</p>
+
+<pre><code>raise ValueError('значение не прошло валидацию')</code></pre>
+
+<p>если value не целое число или не принадлежит диапазону [min_value; max_value].</p>
+
+<p>После этого объявите функцию с сигнатурой:</p>
+
+<p>def is_valid(lst, validators): ...</p>
+
+<p>где <u>lst</u> - список из данных; <u>validators</u> - список из объектов-валидаторов (объектов классов FloatValidator и IntegerValidator).</p>
+
+<p>Эта функция должна отбирать из списка все значения, которые прошли хотя бы по одному валидатору. И возвращать новый список с элементами, прошедшими проверку.</p>
+
+<p>Пример использования классов и функции (эти строчки в программе не писать):</p>
+
+<pre><code>fv = FloatValidator(0, 10.5)
+iv = IntegerValidator(-10, 20)
+lst_out = is_valid([1, 4.5, -10.5, 100, True, 'abc', (1, 2)], validators=[fv, iv])   # [1, 4.5]</code></pre>
+
+<p>P.S. В программе нужно только объявить классы и функцию. На экран ничего выводить не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

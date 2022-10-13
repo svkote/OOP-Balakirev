@@ -1,0 +1,21 @@
+<p><strong>Подвиг 2.</strong> Пусть в программе объявлен следующий класс:</p>
+
+<pre><code>class User:
+    def __init__(self, name, old):
+        self.name = name
+        self.old = old
+
+    def __len__(self):
+        return self.old + 1
+
+    def __bool__(self):
+        return bool(self.old)
+</code></pre>
+
+<p>И определены два его объекта:</p>
+
+<pre><code>user1 = User('Sergey', 45)
+user2 = User('Петр', 0)</code></pre>
+
+<p>Отметьте все верные пункты, связанные с использованием функции bool().<br>
+ </p>

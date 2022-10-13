@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: 'в созданном объекте rt формируются четыре локальных свойства: model, color,
+    radius, height'
+- text: параметры self в инициализаторе класса RoundTable и в инициализаторе класса
+    Table ссылаются на один и тот же объект rt
+- text: при создании объекта rt вызывается сначала инициализатор класса Table, а затем,
+    - класса RoundTable
+- text: класс Table наследуется от класса RoundTable
+- text: класс RoundTable наследуется от класса Table
+- text: при создании объекта rt вызывается сначала инициализатор класса RoundTable,
+    а затем, - класса Table
+- text: параметры self в инициализаторе класса RoundTable и в инициализаторе класса
+    Table ссылаются на разные объекты
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

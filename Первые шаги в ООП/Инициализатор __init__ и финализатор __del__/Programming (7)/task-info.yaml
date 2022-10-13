@@ -1,0 +1,17 @@
+type: code
+custom_name: Programming
+files:
+- name: task.py
+  visible: true
+  text: |-
+    import sys
+
+    # здесь объявляются все необходимые классы
+
+    # считывание списка из входного потока (эту строку не менять)
+    lst_in = list(map(str.strip, sys.stdin.readlines())) # список lst_in в программе не менять
+
+    # здесь создаются объекты классов и вызываются нужные методы
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: для реализации дополнительной логики (программы) в момент присваивания и считывания
+    информации из атрибутов класса или объектов
+- text: для инициализации локальных свойств в момент создания объектов
+- text: для удобства доступа к приватным атрибутам класса или объектов
+- text: для удобства доступа к публичным атрибутам класса или объектов
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

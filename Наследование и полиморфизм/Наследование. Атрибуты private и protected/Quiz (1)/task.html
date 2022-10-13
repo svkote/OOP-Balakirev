@@ -1,0 +1,23 @@
+<p><strong>Подвиг 2.</strong> В программе объявлены два класса следующим образом:</p>
+
+<pre><code>class Phone:
+    def __init__(self, model):
+        self.__model = model
+
+
+class SmartPhone(Phone):
+    def __init__(self, model, memory):
+        super().__init__(model)
+        self.__memory = memory
+
+    def get_info(self):
+        return self.__model, self.__memory
+</code></pre>
+
+<p>И выполняются команды:</p>
+
+<pre><code>phone = SmartPhone('iPhone 123', 1024)
+print(phone.get_info())</code></pre>
+
+<p>Выберите все верные утверждения о приведенной программе.<br>
+ </p>

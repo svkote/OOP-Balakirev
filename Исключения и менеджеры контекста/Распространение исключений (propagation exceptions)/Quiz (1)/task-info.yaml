@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: исключение ValueError сгенерировано в 4-й строчке программы в методе __init__()
+- text: исключение ValueError сгенерировано в 4-й строчке программы и связано с работой
+    команд, записанных в 12-й и 26-й строчках
+- text: исключение ValueError сгенерировано в 26-й строчке программы и связано с работой
+    команд, записанных в 12-й и 4-й строчках
+- text: исключение ValueError стало следствием вызова метода __init__() в 12-й строчке
+    программы
+- text: исключение ValueError не было обработано в основном модуле программы в 26-й
+    строчке
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

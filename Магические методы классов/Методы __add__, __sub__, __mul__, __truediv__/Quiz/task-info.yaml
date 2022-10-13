@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: w = 15 + w2
+- text: w = w1 + w2
+- text: w1 += w2
+- text: w = w1 + w2 + w1
+- text: w = w1 + 10
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: pr = property(get_pr, set_pr, del_pr)
+- text: pr = property(); pr = pr.setter(set_pr); pr = pr.getter(get_pr); pr = pr.deleter(del_pr)
+- text: pr = property(get_pr)
+- text: pr = property(get_pr, set_pr)
+- text: pr = property(); pr = pr.setter(set_pr); pr = pr.getter(get_pr)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

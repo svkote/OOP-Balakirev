@@ -1,0 +1,31 @@
+<p><strong>Подвиг 10 (на повторение, релакс).</strong> Объявите класс с именем Food (еда), объекты которого создаются командой:</p>
+
+<pre><code>food = Food(name, weight, calories)</code></pre>
+
+<p>где <u>name</u> - название продукта (строка); <u>weight</u> - вес продукта (любое положительное число); <u>calories</u> - калорийная ценность продукта (целое положительное число).</p>
+
+<p>Объявите следующие дочерние классы с именами:</p>
+
+<p>BreadFood - хлеб;<br>
+SoupFood - суп;<br>
+FishFood - рыба.</p>
+
+<p>Объекты этих классов должны создаваться командами:</p>
+
+<pre><code>bf = BreadFood(name, weight, calories, white) # white - True для белого хлеба, False - для остальных
+sf = SoupFood(name, weight, calories, dietary) # dietary - True для диетического супа, False - для других видов
+ff = FishFood(name, weight, calories, fish) # fish - вид рыбы (семга, окунь, сардина и т.д.)</code></pre>
+
+<p>В каждом объекте этих дочерних классов должны формироваться соответствующие локальные атрибуты с именами:</p>
+
+<p>BreadFood: _name, _weight, _calories, _white<br>
+SoupFood: _name, _weight, _calories, _dietary<br>
+FishFood: _name, _weight, _calories, _fish</p>
+
+<p>Пример использования классов (эти строчки в программе писать не нужно):</p>
+
+<pre><code>bf = BreadFood("Бородинский хлеб", 34.5, 512, False)
+sf = SoupFood("Черепаший суп", 520, 890.5, False)
+ff = FishFood("Консерва рыбная", 340, 1200, "семга")</code></pre>
+
+<p>P.S. В программе требуется объявить только классы. На экран выводить ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

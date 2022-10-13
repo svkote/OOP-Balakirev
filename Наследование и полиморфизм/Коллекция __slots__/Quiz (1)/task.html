@@ -1,0 +1,20 @@
+<p><strong>Подвиг 2.</strong> В программе объявлены два класса следующим образом:</p>
+
+<pre><code>class Money:
+    __slots__ = '_money',
+
+    def __init__(self, value):
+        self._money = value
+
+
+class MoneyR(Money):
+    pass
+</code></pre>
+
+<p>И, затем, создается объект класса MoneyR:</p>
+
+<pre><code>m = MoneyR(10)
+m.s = 100</code></pre>
+
+<p>Выберите все верные утверждения, связанные с этой программой.<br>
+ </p>

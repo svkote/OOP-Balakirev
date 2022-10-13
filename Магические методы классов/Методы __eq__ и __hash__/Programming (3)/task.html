@@ -1,0 +1,26 @@
+<p><strong>Подвиг 8.</strong> Из входного потока необходимо прочитать список строк командой:</p>
+
+<pre><code>lst_in = list(map(str.strip, sys.stdin.readlines()))</code></pre>
+
+<p>Каждая строка содержит информацию об учебном пособии в формате:</p>
+
+<p>"Название; автор; год издания"</p>
+
+<p>Например:</p>
+
+<p>Python; Балакирев С.М.; 2020<br>
+Python ООП; Балакирев С.М.; 2021<br>
+Python ООП; Балакирев С.М.; 2022<br>
+Python; Балакирев С.М.; 2021</p>
+
+<p>Необходимо каждую из этих строк представить объектом класса BookStudy, которые создаются командой:</p>
+
+<pre><code>bs = BookStudy(name, author, year)</code></pre>
+
+<p>где <u>name</u> - название пособия (строка); <u>author</u> - автор пособия (строка); <u>year</u> - год издания (целое число). Такие же публичные локальные атрибуты должны быть в объектах класса BookStudy.</p>
+
+<p>Для каждого объекта реализовать вычисление хэша по двум атрибутам: name и author (без учета регистра).</p>
+
+<p>Сформировать список <strong>lst_bs</strong> из объектов класса BookStudy на основе прочитанных строк (списка lst_in). После этого определить число книг с уникальными хэшами. Это число сохранить через переменную <strong>unique_books</strong> (целое число).</p>
+
+<p>P.S. На экран ничего выводить не нужно.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">Python; Балакирев С.М.; 2020<br>Python ООП; Балакирев С.М.; 2021<br>Python ООП; Балакирев С.М.; 2022<br>Python; Балакирев С.М.; 2021</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight"><br></code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

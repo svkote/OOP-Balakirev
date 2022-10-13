@@ -1,0 +1,17 @@
+<p><strong>Подвиг 7.</strong> В программе выполняется считывание числовых данных из входного потока, командой:</p>
+
+<pre><code>digits = list(map(float, input().split()))</code></pre>
+
+<p>Эти данные следует представить в виде объекта класса TupleLimit. Сам класс должен наследоваться от класса tuple, а его объекты создаваться командой:</p>
+
+<pre><code>tl = TupleLimit(lst, max_length)</code></pre>
+
+<p>где <u>lst</u> - коллекция (список или кортеж) из данных; <u>max_length</u> - максимально допустимая длина коллекции TupleLimit. Если длина lst превышает значение max_length, то должно генерироваться исключение командой:</p>
+
+<pre><code>raise ValueError('число элементов коллекции превышает заданный предел')</code></pre>
+
+<p>В самом классе TupleLimit переопределить магические методы __str__() и __repr__() для отображения объекта класса TupleLimit в виде строки из набора данных lst, записанных через пробел. Например:</p>
+
+<p>"1.0 2.5 -5.0 11.2"</p>
+
+<p>Создайте в программе объект класса TupleLimit для прочитанных данных digits и параметром max_length = 5. Выведите на экран объект в случае его успешного создания. Иначе, выведите сообщение обработанного исключения.</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">1 2 3 4 5</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">1.0 2.0 3.0 4.0 5.0</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

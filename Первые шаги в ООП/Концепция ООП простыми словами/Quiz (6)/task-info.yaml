@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: да, ООП здесь может заметно упростить программный код
+- text: нет, простой графический редактор удобнее реализовать при использовании структурного
+    программирования (без ООП)
+- text: нет, программа слишком простая, чтобы было какое то преимущество от ООП
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Solved
+record: -1
+custom_name: Quiz
+local_check: false

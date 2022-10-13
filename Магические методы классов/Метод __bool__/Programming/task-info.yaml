@@ -1,0 +1,12 @@
+type: code
+files:
+- name: task.py
+  visible: true
+  text: |-
+    import sys
+
+    # считывание списка из входного потока (эту строчку и список lst_in не менять)
+    lst_in = list(map(str.strip, sys.stdin.readlines()))
+  learner_created: false
+status: Unchecked
+record: -1

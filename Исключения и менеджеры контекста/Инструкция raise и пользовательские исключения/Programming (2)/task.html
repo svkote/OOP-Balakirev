@@ -1,0 +1,38 @@
+<p><strong>Подвиг 6.</strong> Объявите класс DateString для представления дат, объекты которого создаются командой:</p>
+
+<pre><code>date = DateString(date_string)</code></pre>
+
+<p>где date_string - строка с датой в формате:</p>
+
+<p>"DD.MM.YYYY"</p>
+
+<p>здесь DD - день (целое число от 1 до 31); MM - месяц (целое число от 1 до 12); YYYY - год (целое число от 1 до 3000).<br>
+Например:</p>
+
+<pre><code>date = DateString("26.05.2022")</code></pre>
+
+<p>или</p>
+
+<pre><code>date = DateString("26.5.2022") # незначащий ноль может отсутствовать</code></pre>
+
+<p>Если указанная дата в строке записана неверно (не по формату), то генерировать исключение с помощью собственного класса:</p>
+
+<p><strong>DateError</strong> - класс-исключения, унаследованный от класса Exception.</p>
+
+<p>В самом классе DateString переопределить магический метод __str__() для формирования строки даты в формате:</p>
+
+<p>"DD.MM.YYYY"</p>
+
+<p>(здесь должны фигурировать незначащие нули, например, для аргумента "26.5.2022" должна формироваться строка "26.05.2022").</p>
+
+<p>Далее, в программе выполняется считывание строки из входного потока командой:</p>
+
+<pre><code>date_string = input()</code></pre>
+
+<p>Ваша задача создать объект класса DateString с аргументом date_string и вывести объект на экран командой:</p>
+
+<pre><code>print(date) # date - объект класса DateString</code></pre>
+
+<p>Если же произошло исключение, то вывести сообщение (без кавычек):</p>
+
+<p>"Неверный формат даты"</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">1.2.1812</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">01.02.1812</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: в классе SmartPhone выполняется переопределение метода get_info()
+- text: класс Phone расширяет класс SmartPhone
+- text: класс SmartPhone наследуется от класса Phone
+- text: дочерний класс SmartPhone расширяет базовый класс Phone
+- text: класс SmartPhone лишь переопределяет класс Phone
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

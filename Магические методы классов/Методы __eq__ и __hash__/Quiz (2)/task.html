@@ -1,0 +1,22 @@
+<p><strong>Подвиг 3.</strong> Пусть в программе объявлен следующий класс:</p>
+
+<pre><code>class PathLine:
+    def __init__(self, dist, angle):
+        self.dist = dist
+        self.angle = angle
+
+    def __eq__(self, other):
+        return abs(self.dist) == abs(other.dist)
+</code></pre>
+
+<p>И создаются два его объекта:</p>
+
+<pre><code>p1 = PathLine(10, 1.57)
+p2 = PathLine(-10, 0.49)</code></pre>
+
+<p>Затем, вычисляются хэши этих объектов:</p>
+
+<pre><code>h1, h2 = hash(p1), hash(p2)</code></pre>
+
+<p>Что произойдет в последней строчке программы?<br>
+ </p>

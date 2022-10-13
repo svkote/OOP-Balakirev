@@ -1,0 +1,65 @@
+<p><strong>Подвиг 6 (про модуль abc). </strong>В языке Python есть еще один распространенный способ объявления абстрактных методов класса через декоратор abstractmethod модуля abc:</p>
+
+<pre><code>from abc import ABC, abstractmethod</code></pre>
+
+<p>Чтобы корректно работал декоратор abstractmethod сам класс должен наследоваться от базового класса ABC. Например, так:</p>
+
+<pre><code>class Transport(ABC):
+    @abstractmethod
+    def go(self):
+        """Метод для перемещения транспортного средства"""
+
+    @classmethod
+    @abstractmethod
+    def abstract_class_method(cls):
+        """Абстрактный метод класса"""
+</code></pre>
+
+<p>Мы здесь имеем два абстрактных метода внутри класса Transport, причем, первый метод go() - это обычный метод, а второй abstract_class_method() - это абстрактный метод уровня класса. Обратите внимание на порядок использования декораторов classmethod и abstractmethod. Они должны быть записаны именно в такой последовательности.</p>
+
+<p>Теперь, если объявить какой-либо дочерний класс, например:</p>
+
+<pre><code>class Bus(Transport):
+    def __init__(self, model, speed):
+        self._model = model
+        self._speed = speed
+
+    def go(self):
+        print("bus go")
+
+    @classmethod
+    def abstract_class_method(cls):
+        pass
+</code></pre>
+
+<p>То в нем обязательно нужно переопределить абстрактные методы go и abstract_class_method класса Transport. Иначе, объект класса Bus не будет создан (возникнет исключение TypeError).</p>
+
+<p>Используя эту информацию, объявите базовый класс <strong>Model</strong> (модель), в котором нужно объявить один абстрактный метод с сигнатурой:</p>
+
+<p>def get_pk(self): ...</p>
+
+<p>и один обычный метод:</p>
+
+<p>def get_info(self): ...</p>
+
+<p>который бы возвращал строку "Базовый класс Model".</p>
+
+<p>На основе класса Model объявите дочерний класс <strong>ModelForm</strong>, объекты которого создаются командой:</p>
+
+<pre><code>form = ModelForm(login, password)</code></pre>
+
+<p>где <u>login</u> - заголовок перед полем ввода логина (строка); <u>password</u> - заголовок перед полем ввода пароля (строка). В каждом объекте класса ModelForm должны формироваться локальные атрибуты с именами _login и _password, а также автоматически появляться локальный атрибут _id с уникальным целочисленным значением для каждого объекта класса ModelForm.</p>
+
+<p>В классе ModelForm переопределите метод:</p>
+
+<p>def get_pk(self): ...</p>
+
+<p>который должен возвращать значение атрибута _id.</p>
+
+<p>Пример использования классов (эти строчки в программе писать не нужно):</p>
+
+<pre><code>form = ModelForm("Логин", "Пароль")
+print(form.get_pk())</code></pre>
+
+<p>P.S. В программе требуется объявить только классы. На экран выводить ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

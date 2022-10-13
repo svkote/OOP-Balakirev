@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: позволяет вызывать и объекты и классы подобно функциям, если в классе определен
+    метод __call__()
+- text: вызывается перед вызовом каждого метода, объявленного в классе
+- text: позволяет вызывать объекты класса подобно функциям, в котором определен метод
+    __call__()
+- text: позволяет вызывать класс как функцию, если в нем определен метод __call__()
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: без менеджеров контекста невозможно обрабатывать ошибки при работе с файлами
+- text: да, но программа может получиться трудно понимаемой и трудно расширяемой
+- text: нет, написать большой проект без обработки исключений в принципе невозможно
+- text: вполне возможны ситуации, когда блоки try/except можно заменить операторами
+    if/elif/else без потери качества программного кода
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

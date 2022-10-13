@@ -1,0 +1,23 @@
+<p><strong>Подвиг 1.</strong> Пусть в программе объявлен следующий класс:</p>
+
+<pre><code>class Money:
+    def __init__(self):
+        self.__money = 0
+
+    def set_money(self, value):
+        self.__money = value
+
+    def get_money(self):
+        return self.__money
+
+    money = property(get_money, set_money)
+</code></pre>
+
+<p>И, затем, выполняются команды:</p>
+
+<pre><code>m = Money()
+m.money = 10
+</code></pre>
+
+<p>Выберите верные утверждения, связанные с этими программными строчками.<br>
+ </p>

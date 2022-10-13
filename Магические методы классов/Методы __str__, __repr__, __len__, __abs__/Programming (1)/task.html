@@ -1,0 +1,29 @@
+<p><strong>Подвиг 3.</strong> Объявите класс с именем Model, объекты которого создаются командой:</p>
+
+<pre><code>model = Model()</code></pre>
+
+<p>Объявите в этом классе метод query() для формирования записи базы данных. Использоваться этот метод должен следующим образом:</p>
+
+<p>model.query(field_1=value_1, field_2=value_2, ..., field_N=value_N)</p>
+
+<p>Например:</p>
+
+<pre><code>model.query(id=1, fio='Sergey', old=33)</code></pre>
+
+<p>Все эти переданные данные должны сохраняться внутри объекта model класса Model. Затем, при выполнении команды:</p>
+
+<pre><code>print(model)</code></pre>
+
+<p>В консоль должна выводиться информация об объекте в формате:</p>
+
+<p>"Model: field_1 = value_1, field_2 = value_2, ..., field_N = value_N"</p>
+
+<p>Например:</p>
+
+<p>"Model: id = 1, fio = Sergey, old = 33"</p>
+
+<p>Если метод query() не вызывался, то в консоль выводится строка:</p>
+
+<p>"Model"</p>
+
+<p>P.S. В программе нужно только объявить класс, выводить в консоль ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

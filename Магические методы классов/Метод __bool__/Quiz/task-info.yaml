@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: bool(user2) вернет значение True, так как будет вызван магический метод __bool__()
+    базового класса, который вернет True
+- text: bool(user1) вернет значение True, так как будет вызван магический метод __len__(),
+    который вернет не нулевое значение
+- text: bool(user1) вернет значение True, так как при отсутствии магического метода
+    __bool__() функция bool() для объектов любых классов возвращает True
+- text: bool(user1) вернет значение False, так как при отсутствии магического метода
+    __bool__() функция bool() для объектов любых классов возвращает False
+- text: bool(user2) вернет значение False, так как будет вызван магический метод __len__(),
+    который вернет нулевое значение
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

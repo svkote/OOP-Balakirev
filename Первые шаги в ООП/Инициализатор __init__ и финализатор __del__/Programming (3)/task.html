@@ -1,0 +1,21 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/Vr4c1LgE91o" rel="noopener noreferrer nofollow">https://youtu.be/Vr4c1LgE91o</a></p>
+
+<p><strong>Подвиг 5. </strong>Объявите класс TriangleChecker, объекты которого можно было бы создавать командой:</p>
+
+<pre><code>tr = TriangleChecker(a, b, c)</code></pre>
+
+<p>Здесь a, b, c - длины сторон треугольника.</p>
+
+<p>В классе TriangleChecker необходимо объявить метод is_triangle(), который бы возвращал следующие коды:</p>
+
+<p>1 - если хотя бы одна сторона не число (не float или int) или хотя бы одно число меньше или равно нулю;<br>
+2 - указанные числа a, b, c не могут являться длинами сторон треугольника;<br>
+3 - стороны a, b, c образуют треугольник.</p>
+
+<p>Проверку параметров a, b, c проводить именно в таком порядке.</p>
+
+<p>Прочитайте из входного потока строку, содержащую три числа, разделенных пробелами, командой:</p>
+
+<pre><code>a, b, c = map(int, input().split())</code></pre>
+
+<p>Затем, создайте объект <strong>tr </strong>класса TriangleChecker и передайте ему прочитанные значения a, b, c. Вызовите метод is_triangle() из объекта tr и выведите результат на экран (код, который она вернет).</p><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">3 4 5<br></code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">3<br></code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

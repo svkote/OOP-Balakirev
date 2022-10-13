@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Ссылка на базовый класс
+- text: Ссылка на класс Loader
+- text: Ссылка на текущий метод
+- text: Ссылка на экземпляр класса, из которого вызван метод
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

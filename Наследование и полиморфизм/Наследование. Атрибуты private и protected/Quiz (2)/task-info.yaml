@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: программа отработает без ошибок, если метод __verify_weight() перенести в
+    базовый класс Auto
+- text: метод __verify_weight() класса BMW недоступен по этому имени в базовом классе
+    Auto
+- text: атрибуты __MIN_WEIGHT и __MAX_WEIGHT доступны только внутри класса Auto
+- text: метод __verify_model() класса Auto недоступен по этому имени в дочернем классе
+    BMW
+- text: программа отработает без ошибок и в консоль будет выведен вес автомобиля и
+    его модель
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

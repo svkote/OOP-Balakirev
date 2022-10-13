@@ -1,0 +1,23 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/fiYiJWXv-5I" rel="noopener noreferrer nofollow">https://youtu.be/fiYiJWXv-5I</a></p>
+
+<p><strong>Подвиг 2.</strong> Объявите класс RandomPassword для генерации случайных паролей. Объекты этого класса должны создаваться командой:</p>
+
+<pre><code>rnd = RandomPassword(psw_chars, min_length, max_length)</code></pre>
+
+<p>где psw_chars - строка из разрешенных в пароле символов; min_length, max_length - минимальная и максимальная длина генерируемых паролей.</p>
+
+<p>Непосредственная генерация одного пароля должна выполняться командой:</p>
+
+<pre><code>psw = rnd()</code></pre>
+
+<p>где <u>psw</u> - ссылка на строку длиной в диапазоне [min_length; max_length] из случайно выбранных символов строки <u>psw_chars</u>.</p>
+
+<p>С помощью генератора списка (list comprehension) создайте список <strong>lst_pass </strong>из трех сгенерированных паролей объектом rnd класса RandomPassword, созданного с параметрами: </p>
+
+<pre><code>min_length = 5
+max_length = 20
+psw_chars = "qwertyuiopasdfghjklzxcvbnm0123456789!@#$%&amp;*"</code></pre>
+
+<p>P.S. Выводить на экран ничего не нужно, только создать список из паролей.</p>
+
+<p>P.P.S. Дополнительное домашнее задание: попробуйте реализовать этот же функционал с использованием замыканий функций.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: st.Stepik.get_certificate()
+- text: Stepik.st.get_certificate()
+- text: Stepik.get_certificate()
+- text: st.get_certificate()
+- text: get_certificate()
+- text: Stepik.get_certificate(st)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

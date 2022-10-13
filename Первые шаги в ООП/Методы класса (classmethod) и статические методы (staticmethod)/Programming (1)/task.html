@@ -1,0 +1,57 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/D02X5B6zLi8" rel="noopener noreferrer nofollow">https://youtu.be/D02X5B6zLi8</a></p>
+
+<p><strong>Подвиг 7.</strong> В программе объявлен следующий класс для работы с формами ввода логин/пароль:</p>
+
+<pre><code>class FormLogin:
+    def __init__(self, lgn, psw):
+        self.login = lgn
+        self.password = psw
+
+    def render_template(self):
+        return "\n".join(['&lt;form action="#"&gt;', self.login.get_html(), self.password.get_html(), '&lt;/form&gt;'])</code></pre>
+
+<p>Который предполагается использовать следующим образом:</p>
+
+<pre><code>login = FormLogin(TextInput("Логин"), PasswordInput("Пароль"))
+html = login.render_template()</code></pre>
+
+<p>Необходимо прописать классы TextInput и PasswordInput, объекты которых формируются командами:</p>
+
+<pre><code class="language-python">login = TextInput(name, size)
+psw = PasswordInput(name, size)</code></pre>
+
+<p>В каждом объекте этих классов должны быть следующие локальные свойства:</p>
+
+<p><u>name</u> - название для поля (сохраняет передаваемое имя, например, "Логин" или "Пароль");<br>
+<u>size</u> - размер поля ввода (целое число, по умолчанию 10).</p>
+
+<p>Также классы TextInput и PasswordInput должны иметь метод:</p>
+
+<p><u>get_html(self)</u> - возвращает сформированную HTML-строку в формате (1-я строка для класса TextInput ; 2-я - для класса PasswordInput):</p>
+
+<p>&lt;p class='login'&gt;&lt;имя поля&gt;: &lt;input type='text' size=&lt;размер поля&gt; /&gt;<br>
+&lt;p class='password'&gt;&lt;имя поля&gt;: &lt;input type='text' size=&lt;размер поля&gt; /&gt;</p>
+
+<p>Например, для поля login:</p>
+
+<p>&lt;p class='login'&gt;Логин: &lt;input type='text' size=10 /&gt;</p>
+
+<p>Также классы TextInput и PasswordInput должны иметь метод класса (@classmethod):</p>
+
+<p><u>check_name(cls, name)</u> - для проверки корректности переданного имя поля (следует вызывать в инициализаторе) по следующим критериям:</p>
+
+<p>- длина имени не менее 3 символов и не более 50;<br>
+- в именах могут использоваться только символы русского, английского алфавитов, цифры и пробелы</p>
+
+<p>Если проверка не проходит, то генерировать исключение командой:</p>
+
+<pre><code>raise ValueError("некорректное поле name")</code></pre>
+
+<p>Для проверки допустимых символов в каждом классе должен быть прописан атрибут CHARS_CORRECT:</p>
+
+<pre><code>CHARS = "абвгдеёжзийклмнопрстуфхцчшщьыъэюя " + ascii_lowercase
+CHARS_CORRECT = CHARS + CHARS.upper() + digits</code></pre>
+
+<p>По заданию нужно объявить только классы TextInput и PasswordInput с соответствующим функционалом. Более ничего.</p>
+
+<p>P. S. В данном задании получится дублирование кода в классах TextInput и PasswordInput. На данном этапе - это нормально.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

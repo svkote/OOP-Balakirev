@@ -1,0 +1,21 @@
+<p><strong>Подвиг 3.</strong> В программе объявлены два класса следующим образом:</p>
+
+<pre><code>class Money:
+    __slots__ = '_money',
+
+    def __init__(self, value):
+        self._money = value
+
+
+class MoneyR(Money):
+    __slots__ = '_value',
+</code></pre>
+
+<p>И, затем, выполняются команды:</p>
+
+<pre><code>m = MoneyR(10)
+m._money = 100
+m._value = 20</code></pre>
+
+<p>Выберите все верные утверждения, связанные с этой программой.<br>
+ </p>

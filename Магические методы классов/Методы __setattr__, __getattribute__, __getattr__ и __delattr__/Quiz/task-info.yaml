@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: методы, ответчающие за создание и удаление объектов класса
+- text: методы с двумя нижними подчеркиваниями до и после имени метода, которые автоматически
+    вызываются в определенных для них ситуациях
+- text: методы, через которые происходит работа с атрибутами класса или объектов
+- text: любые методы с двумя нижними подчеркиваниями до и после своего имени
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

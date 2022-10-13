@@ -1,0 +1,24 @@
+class MoneyOperators:
+    def __add__(self, other):
+        if type(other) in (int, float):
+            return self.__class__(self.money + other)
+
+        if type(self) != type(other):
+            raise TypeError('Разные типы объектов')
+
+        return self.__class__(self.money + other.money)
+
+    # здесь объявляйте еще один метод
+
+
+# здесь объявляйте класс Money
+
+
+class MoneyR(Money, MoneyOperators):
+    def __str__(self):
+        return f"MoneyR: {self.money}"
+
+
+class MoneyD(Money, MoneyOperators):
+    def __str__(self):
+        return f"MoneyD: {self.money}"

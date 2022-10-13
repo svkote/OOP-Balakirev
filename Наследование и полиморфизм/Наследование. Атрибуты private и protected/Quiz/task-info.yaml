@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: приватные атрибуты, созданные в инициализаторе базового класса, недоступны
+    (по их исходным именам) в дочерних классах
+- text: защищенные атрибуты создаются с целью их использования в текущем классе и
+    во всех дочерних классах
+- text: защищенные атрибуты классов доступны всюду по их исходным именам, также как
+    и публичные (public) атрибуты классов
+- text: приватные атрибуты создаются с целью их использования только в текущем классе
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

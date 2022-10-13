@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: если объекты a == b, то hash(a) == hash(b)
+- text: если объекты a != b, то hash(a) != hash(b)
+- text: если hash(a) == hash(b), то a == b
+- text: если hash(a) != hash(b), то a != b
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

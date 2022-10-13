@@ -1,0 +1,44 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/ArF90ldgm70" rel="noopener noreferrer nofollow">https://youtu.be/ArF90ldgm70</a></p>
+
+<p><strong>Подвиг 9 (на повторение). </strong>Необходимо объявить функцию-декоратор class_log для класса, которая бы создавала логирование вызовов методов класса. Например следующие строчки программы:</p>
+
+<pre><code>vector_log = []
+
+
+@class_log(vector_log)
+class Vector:
+    def __init__(self, *args):
+        self.__coords = list(args)
+
+    def __getitem__(self, item):
+        return self.__coords[item]
+
+    def __setitem__(self, key, value):
+        self.__coords[key] = value
+</code></pre>
+
+<p>декорируют класс Vector и в список vector_log добавляются имена методов, которые были вызваны при использовании этого класса. В частности, после выполнения команд:</p>
+
+<pre><code>v = Vector(1, 2, 3)
+v[0] = 10</code></pre>
+
+<p>в списке vector_log должны быть два метода:</p>
+
+<p>['__init__', '__setitem__']</p>
+
+<p>Ваша задача реализовать декоратор с именем class_log.</p>
+
+<p><strong>Напоминание.</strong> Ранее вы уже создавали функцию-декоратор для класса следующим образом:</p>
+
+<pre><code>def integer_params(cls):
+    methods = {k: v for k, v in cls.__dict__.items() if callable(v)}
+    for k, v in methods.items():
+        setattr(cls, k, integer_params_decorated(v))
+
+    return cls
+</code></pre>
+
+<p>Используйте этот принцип для успешного прохождения подвига.</p>
+
+<p>P.S. В программе нужно объявить только класс и необходимые функции. На экран выводить ничего не нужно.<br>
+ </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

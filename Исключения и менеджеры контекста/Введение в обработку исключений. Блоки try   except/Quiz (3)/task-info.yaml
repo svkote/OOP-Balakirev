@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: ни в каких, так как класс ZeroDivisionError является дочерним по отношению
+    к классу ArithmeticError
+- text: если значение x будет равно нулю
+- text: если ввести хотя бы одно не числовое значение
+- text: всегда будет переходить при возникновении исключения типа ZeroDivisionError
+- text: если значение y будет равно нулю
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

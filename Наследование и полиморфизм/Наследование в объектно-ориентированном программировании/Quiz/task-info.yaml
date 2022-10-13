@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: это когда один класс (дочерний) расширяет функциональность другого (базового)
+    класса
+- text: это когда в родительском классе объявлен другой (базовый) класс
+- text: это когда базовый класс конструируется на основе одного или нескольких дочерних
+    классов
+- text: это когда один класс использует методы любого другого класса
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

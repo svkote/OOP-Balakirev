@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: при вводе вещественных или целочисленных значений
+- text: при вводе не числовых или целочисленных значений
+- text: при вводе не числовых или вещественных значений
+- text: при вводе любых не числовых значений
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

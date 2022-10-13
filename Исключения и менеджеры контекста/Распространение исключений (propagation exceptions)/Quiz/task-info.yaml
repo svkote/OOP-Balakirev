@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: при возникновении исключения в классе Geom, его можно обрабатывать только
+    в классе Ellipse, иначе программа завершится с ошибкой
+- text: все исключения, формируемые в классе Geom, можно обрабатывать внутри класса
+    Ellipse
+- text: если бы переменная w ссылалась на строку, то в классе Geom было бы сгенерировано
+    исключение, которое поднялось бы до класса Ellipse и обработано в основной программе
+    в блоке try
+- text: при вводе положительных числовых значений объект класса Ellipse будет создан
+    успешно
+- text: исключения, генерируемые в классе Ellipse можно обрабатывать в базовом классе
+    Geom
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+local_check: false

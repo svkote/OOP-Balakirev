@@ -1,0 +1,15 @@
+type: code
+files:
+- name: task.py
+  visible: true
+  text: |-
+    class Point:
+        def __init__(self, x, y):
+            self._x = x
+            self._y = y
+
+
+    pt = Point(1, 2)
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Будет выведено 'top', так как в строчке db.__dict__['x'] = 'top' явно создается
+    локальный атрибут x и затем он имеет наибольший приоритет при обращении к нему
+    (в строчке db.x).
+- text: Будет выведено 'hi', так как StringField - это дескриптор данных и он имеет
+    наибольший приоритет при обращении к атрибутам, поэтому в строчке db.x будет обращение
+    к дескриптору, а не к локальному свойству.
+- text: Будет выведено 'top', так как в строчке db.__dict__['x'] = 'top', фактически,
+    идет обращение к дескриптору StringField и заносится новое значение 'top'.
+- text: Будет выведено 'hi', так как локальное свойство в строчке db.__dict__['x']
+    = 'top' просто не будет создано (имя x уже занято дескриптором StringField).
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: программа ни при каких типах исключений не перейдет во второй блок except
+- text: при выполнении этой программы на экране будет отображена строка "ServerLimitException"
+- text: после выполнения оператора raise программа перейдет в первый блок except
+- text: после выполнения оператора raise программа перейдет во второй блок except
+- text: при выполнении этой программы на экране будет отображена строка "LimitException"
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false

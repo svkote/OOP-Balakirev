@@ -1,0 +1,84 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/yXPFcDe6jco" rel="noopener noreferrer nofollow">https://youtu.be/yXPFcDe6jco</a></p>
+
+<p><strong>Подвиг 8 (введение в паттерн миксинов - mixins).</strong> Часто множественное наследование используют для наполнения дочернего класса определенным функционалом. То есть, с указанием каждого нового базового класса, дочерний класс приобретает все больше и больше возможностей. И, наоборот, убирая часть базовых классов, дочерний класс теряет соответствующую часть функционала. </p>
+
+<p>Например, паттерн миксинов активно используют в популярном фреймворке Django.  В частности, когда нужно указать дочернему классу, какие запросы от клиента он должен обрабатывать (запросы типа GET, POST, PUT, DELETE и т.п.). В качестве примера реализуем эту идею в очень упрощенном виде, но сохраняя суть паттерна миксинов.</p>
+
+<p>Предположим, что в программе уже существует следующий набор классов:</p>
+
+<pre><code class="language-python">class RetriveMixin:
+    def get(self, request):
+        return "GET: " + request.get('url')
+
+
+class CreateMixin:
+    def post(self, request):
+        return "POST: " + request.get('url')
+
+
+class UpdateMixin:
+    def put(self, request):
+        return "PUT: " + request.get('url')</code></pre>
+
+<p>Здесь в каждом классе выполняется имитация обработки запросов. За GET-запрос отвечает метод get() класса RetriveMixin, за POST-запрос - метод post() класса CreateMixin, за PUT-запрос - метод put() класса UpdateMixin.</p>
+
+<p>Далее, вам нужно объявить класс с именем GeneralView, в котором следует указать атрибут (на уровне класса):</p>
+
+<pre><code>allowed_methods = ('GET', 'POST', 'PUT', 'DELETE')</code></pre>
+
+<p>для перечня разрешенных запросов. А также объявить метод render_request со следующей сигнатурой:</p>
+
+<p>def render_request(self, request): ...</p>
+
+<p>Здесь <u>request</u> - это словарь (объект запроса), в котором обязательно должны быть два ключа:</p>
+
+<p>'url' - адрес для обработки запроса;<br>
+'method' - метод запроса: 'GET', 'POST', 'PUT', 'DELETE' и т. д.</p>
+
+<p>В методе render_request() нужно сначала проверить, является ли указанный запрос в словаре request разрешенным (присутствует в списке allowed_methods). И если это не так, то генерировать исключение командой:</p>
+
+<pre><code>raise TypeError(f"Метод {request.get('method')} не разрешен.")</code></pre>
+
+<p>Иначе, вызвать метод по его имени:</p>
+
+<pre><code>method_request = request.get('method').lower()  # имя метода, малыми буквами</code></pre>
+
+<p><strong>Подсказка: </strong>чтобы получить ссылку на метод с именем method_request, воспользуйтесь магическим методом __getattribute__().</p>
+
+<p>Для использования полученных классов, в программе объявляется следующий дочерний класс:</p>
+
+<pre><code>class DetailView(RetriveMixin, GeneralView):
+    allowed_methods = ('GET', 'PUT', )</code></pre>
+
+<p>Воспользоваться им можно, например, следующим образом (эти строчки в программе не писать):</p>
+
+<pre><code>view = DetailView()
+html = view.render_request({'url': 'https://stepik.org/course/116336/', 'method': 'GET'})
+print(html)   # GET: https://stepik.org/course/116336/</code></pre>
+
+<p>Если в запросе указать другой метод:</p>
+
+<pre><code>html = view.render_request({'url': 'https://stepik.org/course/116336/', 'method': 'PUT'})</code></pre>
+
+<p>то естественным образом возникнет исключение (реализовывать в программе не нужно, это уже встроено в сам язык Python):</p>
+
+<p>AttributeError: 'DetailView' object has no attribute 'put'</p>
+
+<p>так как дочерний класс DetailView не имеет метода put. Поправить это можно, если указать соответствующий базовый класс:</p>
+
+<pre><code>class DetailView(RetriveMixin, UpdateMixin, GeneralView):
+    allowed_methods = ('GET', 'PUT', )</code></pre>
+
+<p>Теперь, при выполнении команд:</p>
+
+<pre><code>view = DetailView()
+html = view.render_request({'url': 'https://stepik.org/course/116336/', 'method': 'PUT'})
+print(html)</code></pre>
+
+<p>будет выведено:</p>
+
+<p>PUT: https://stepik.org/course/116336/</p>
+
+<p>Это и есть принцип работы паттерна миксинов.</p>
+
+<p>P.S. В программе требуется объявить только класс GeneralView. На экран выводить ничего не нужно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

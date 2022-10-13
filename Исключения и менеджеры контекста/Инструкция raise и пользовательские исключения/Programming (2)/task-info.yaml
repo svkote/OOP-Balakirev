@@ -1,0 +1,15 @@
+type: code
+custom_name: Programming
+files:
+- name: task.py
+  visible: true
+  text: |-
+    # здесь объявляйте классы
+
+
+    date_string = input()
+
+    # здесь создавайте объект класса DateString и выполняйте обработку исключений
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,21 @@
+<p><strong>Подвиг 3.</strong> Имеется следующий фрагмент программы:</p>
+
+<pre><code>class LimitException(Exception):
+    """Превышение лимита"""
+
+
+class ServerLimitException(LimitException):
+    """Превышение нагрузки на сервер"""
+
+
+try:
+    raise ServerLimitException('превышение серверной нагрузки')
+except LimitException:
+    print("LimitException")
+except ServerLimitException:
+    print("ServerLimitException")
+
+</code></pre>
+
+<p>Выберите все верные утверждения, относящиеся к этой программе.<br>
+ </p>

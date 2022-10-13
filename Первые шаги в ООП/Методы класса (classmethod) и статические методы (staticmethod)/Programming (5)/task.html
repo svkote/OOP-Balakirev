@@ -1,0 +1,25 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/38QoBSpQqnM" rel="noopener noreferrer nofollow">https://youtu.be/38QoBSpQqnM</a></p>
+
+<p><strong>Подвиг 11 (на повторение).</strong> Объявите класс для мессенджера с именем <strong>Viber</strong>. В этом классе должны быть следующие методы:</p>
+
+<p><u>add_message(msg)</u> - добавление нового сообщения в список сообщений;<br>
+<u>remove_message(msg)</u> - удаление сообщения из списка;<br>
+<u>set_like(msg)</u> - поставить/убрать лайк для сообщения msg (т.е. изменить атрибут fl_like объекта msg: если лайка нет то он ставится, если уже есть, то убирается);<br>
+<u>show_last_message(число)</u> - отображение последних сообщений;<br>
+<u>total_messages()</u> - возвращает общее число сообщений.</p>
+
+<p>Эти методы предполагается использовать следующим образом (эти строчки в программе не писать):</p>
+
+<pre><code>msg = Message("Всем привет!")
+Viber.add_message(msg)
+Viber.add_message(Message("Это курс по Python ООП."))
+Viber.add_message(Message("Что вы о нем думаете?"))
+Viber.set_like(msg)
+Viber.remove_message(msg)</code></pre>
+
+<p>Класс Message (необходимо также объявить) позволяет создавать объекты-сообщения со следующим набором локальных свойств:</p>
+
+<p><u>text</u> - текст сообщения (строка);<br>
+<u>fl_like</u> - поставлен или не поставлен лайк у сообщения (булево значение True - если лайк есть и False - в противном случае, изначально False);</p>
+
+<p>P.S. Как хранить список сообщений, решите самостоятельно.</p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

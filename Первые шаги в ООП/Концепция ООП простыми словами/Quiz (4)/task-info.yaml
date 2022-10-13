@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: нет, классы следует использовать не просто для хранения данных, а формирования
+    внутри них некоторого функционала (алгоритма)
+- text: да, описать каждую книгу как объект класса "Книга" хорошая идея
+- text: один класс в программе - это слишком расточительно
+- text: нет, использование классов в данной задаче не создаст дополнительных удобств
+    и преимуществ (при программировании)
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Solved
+record: -1
+custom_name: Quiz
+local_check: false

@@ -1,0 +1,47 @@
+<p>Видео-разбор подвига (решение смотреть только после своей попытки): <a href="https://youtu.be/6-xKuQp9b7Y" rel="noopener noreferrer nofollow">https://youtu.be/6-xKuQp9b7Y</a></p>
+
+<p><strong>Подвиг 5.</strong> Объявите класс LinkedList (связный список) для работы со следующей структурой данных:</p>
+
+<p style="text-align: center;"><img alt="" height="190" name="linked_list.png" src="https://ucarecdn.com/bcf85c84-405f-4d53-a494-156db39a123f/" width="723"></p>
+
+<p>Здесь создается список из связанных между собой объектов класса ObjList. Объекты этого класса создаются командой:</p>
+
+<pre><code>obj = ObjList(data)</code></pre>
+
+<p>где <u>data</u> - строка с некоторой информацией. Также в каждом объекте obj класса ObjList должны создаваться следующие локальные атрибуты:</p>
+
+<p>__data - ссылка на строку с данными;<br>
+__prev - ссылка на предыдущий объект связного списка (если объекта нет, то __prev = None);<br>
+__next - ссылка на следующий объект связного списка (если объекта нет, то __next = None).</p>
+
+<p>В свою очередь, объекты класса LinkedList должны создаваться командой:</p>
+
+<pre><code>linked_lst = LinkedList()</code></pre>
+
+<p>и содержать локальные атрибуты:</p>
+
+<p>head - ссылка на первый объект связного списка (если список пуст, то head = None);<br>
+tail - ссылка на последний объект связного списка (если список пуст, то tail = None).</p>
+
+<p>А сам класс содержать следующие методы:</p>
+
+<p><u>add_obj(obj)</u> - добавление нового объекта obj класса ObjList в конец связного списка;<br>
+<u>remove_obj(indx)</u> - удаление объекта класса ObjList из связного списка по его порядковому номеру (индексу); индекс отсчитывается с нуля.</p>
+
+<p>Также с объектами класса LinkedList должны поддерживаться следующие операции:</p>
+
+<p>len(linked_lst) - возвращает число объектов в связном списке;<br>
+linked_lst(indx) - возвращает строку __data, хранящуюся в объекте класса ObjList, расположенного под индексом indx (в связном списке).</p>
+
+<p>Пример использования классов (эти строчки в программе писать не нужно):</p>
+
+<pre><code>linked_lst = LinkedList()
+linked_lst.add_obj(ObjList("Sergey"))
+linked_lst.add_obj(ObjList("Balakirev"))
+linked_lst.add_obj(ObjList("Python"))
+linked_lst.remove_obj(2)
+linked_lst.add_obj(ObjList("Python ООП"))
+n = len(linked_lst)  # n = 3
+s = linked_lst(1) # s = Balakirev</code></pre>
+
+<p>P.S. На экран в программе ничего выводить не нужно. </p><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>

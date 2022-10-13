@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Через функцию super() вызывается метод __new__(cls) базового класса с аргументом
+    cls - ссылки на базовый класс
+- text: Идет обращение к базовому классу, из которого вызывается конструктор - метод
+    __new__(cls)  с аргументом cls - ссылки на текущий класс
+- text: Создается объект класса super, ссылка на который и возвращается переопределенным
+    методом __new__()
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz
+local_check: false
