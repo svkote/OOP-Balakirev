@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: Только методы класса
-- text: Экземпляры (объекты) класса
-- text: Переменные и имена методов (ссылки на методы) класса
 - text: Только переменные класса
+- text: Переменные и имена методов (ссылки на методы) класса
+- text: Экземпляры (объекты) класса
+- text: Только методы класса
 files:
 - name: task.py
   visible: true
@@ -12,7 +12,12 @@ files:
     #  You can experiment here, it won’t be checked
 
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 13 Oct 2022 21:46:40 UTC
 record: -1
+selected_options:
+- 1
 custom_name: Quiz
 local_check: false

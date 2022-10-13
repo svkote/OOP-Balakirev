@@ -21,5 +21,8 @@ files:
     sr = StreamReader()
     data, result = sr.readlines()
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 13 Oct 2022 22:36:10 UTC
 record: -1
