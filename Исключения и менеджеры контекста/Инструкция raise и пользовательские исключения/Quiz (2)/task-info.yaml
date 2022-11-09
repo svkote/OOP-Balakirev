@@ -2,10 +2,10 @@ type: choice
 is_multiple_choice: true
 options:
 - text: программа ни при каких типах исключений не перейдет во второй блок except
-- text: при выполнении этой программы на экране будет отображена строка "ServerLimitException"
-- text: после выполнения оператора raise программа перейдет в первый блок except
 - text: после выполнения оператора raise программа перейдет во второй блок except
+- text: после выполнения оператора raise программа перейдет в первый блок except
 - text: при выполнении этой программы на экране будет отображена строка "LimitException"
+- text: при выполнении этой программы на экране будет отображена строка "ServerLimitException"
 files:
 - name: task.py
   visible: true

@@ -11,7 +11,4 @@ files:
     # здесь создайте экземпляр tr класса TriangleChecker и вызовите метод is_triangle() с выводом информации на экран
   learner_created: false
 status: Solved
-feedback:
-  message: <html>Correct solution</html>
-  time: Tue, 25 Oct 2022 08:08:56 UTC
 record: -1

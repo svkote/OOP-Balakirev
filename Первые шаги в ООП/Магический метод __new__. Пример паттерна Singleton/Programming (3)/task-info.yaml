@@ -5,5 +5,8 @@ files:
   visible: true
   text: '# здесь объявляется класс Point'
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 09 Nov 2022 17:15:51 UTC
 record: -1

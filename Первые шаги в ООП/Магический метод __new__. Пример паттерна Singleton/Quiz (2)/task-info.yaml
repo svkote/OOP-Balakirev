@@ -1,9 +1,9 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: ссылка на базовый класс
-- text: ссылка на новый созданный объект класса
 - text: ссылка на класс, для которого создается объект
+- text: ссылка на новый созданный объект класса
+- text: ссылка на базовый класс
 files:
 - name: task.py
   visible: true
@@ -11,7 +11,7 @@ files:
     #  You can experiment here, it won’t be checked
 
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 custom_name: Quiz
 local_check: false

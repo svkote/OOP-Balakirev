@@ -1,4 +1,12 @@
 # Здесь объявляется класс Factory
+class Factory:
+    def build_sequence(self):
+        lst = []
+        return lst
+
+    def build_number(self, string):
+        return float(string)
+
 
 class Loader:
     def parse_format(self, string, factory):

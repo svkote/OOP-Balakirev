@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: непосредственно перед уничтожением объекта класса сборщиком мусора
-- text: сразу после создания объекта класса
-- text: после вызова инициализатора класса - метода __init__()
 - text: непосредственно перед созданием объекта класса
+- text: непосредственно перед уничтожением объекта класса сборщиком мусора
+- text: после вызова инициализатора класса - метода __init__()
+- text: сразу после создания объекта класса
 files:
 - name: task.py
   visible: true
@@ -12,6 +12,6 @@ files:
     #  You can experiment here, it won’t be checked
 
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 local_check: false

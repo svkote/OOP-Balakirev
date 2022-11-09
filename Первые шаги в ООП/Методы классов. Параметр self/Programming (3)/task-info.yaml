@@ -21,7 +21,4 @@ files:
     db.insert(lst_in)
   learner_created: false
 status: Solved
-feedback:
-  message: <html>Correct solution</html>
-  time: Fri, 14 Oct 2022 05:24:45 UTC
 record: -1

@@ -16,5 +16,8 @@ files:
 
     # здесь объявляйте класс Dialog
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 09 Nov 2022 16:05:28 UTC
 record: -1

@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: это ссылка на класс, которому принадлежит метод
 - text: это просто обязательный (зарезервированный) параметр для методов класса, через
     который можно передавать произвольные данные
 - text: это ссылка на текущий метод класса
+- text: это ссылка на класс, которому принадлежит метод
 - text: это ссылка на объект класса, из которого был вызван метод
 files:
 - name: task.py
@@ -14,11 +14,6 @@ files:
 
   learner_created: false
 status: Solved
-feedback:
-  message: <html>Correct solution</html>
-  time: Thu, 13 Oct 2022 21:47:05 UTC
 record: -1
-selected_options:
-- 3
 custom_name: Quiz
 local_check: false

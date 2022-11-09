@@ -21,5 +21,8 @@ files:
     s = input()
     res = ld.parse_format(s, Factory())
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 09 Nov 2022 17:26:56 UTC
 record: -1
